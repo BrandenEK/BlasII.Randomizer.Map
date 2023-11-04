@@ -11,4 +11,13 @@ namespace BlasII.Randomizer.Map
     {
         public static void Postfix() => Main.MapTracker.RefreshMap();
     }
+
+    /// <summary>
+    /// Update the location positions whenever it is updated
+    /// </summary>
+    [HarmonyPatch(typeof(MapWindowLogic), nameof(MapWindowLogic.Update))]
+    class Map_Update_Patch
+    {
+        public static void Postfix() => Main.MapTracker.UpdateMap();
+    }
 }
