@@ -9,6 +9,8 @@ namespace BlasII.Randomizer.Map
     public class MapTracker : BlasIIMod
     {
         private Transform _locationHolder;
+        private Transform _cellHolder;
+
         private Sprite _locationImage;
 
         public MapTracker() : base(ModInfo.MOD_ID, ModInfo.MOD_NAME, ModInfo.MOD_AUTHOR, ModInfo.MOD_VERSION) { }
@@ -43,8 +45,9 @@ namespace BlasII.Randomizer.Map
             if (_locationHolder == null)
                 return;
 
-            var map = Object.FindObjectOfType<MapWindowLogic>(); // Store this instead
-            _locationHolder.position = map.mapContent.GetChild(0).GetChild(0).position;
+            _locationHolder.position = _cellHolder.position;
+
+            // Only do this next part if debug
 
             Transform location = _locationHolder.GetChild(_locationHolder.childCount - 1);
             if (Input.GetKeyDown(KeyCode.Keypad5))
@@ -72,23 +75,22 @@ namespace BlasII.Randomizer.Map
         private void CreateLocationHolder()
         {
             var parent = Object.FindObjectOfType<MapWindowLogic>()?.mapContent;
-            //.transform.Find("background/MarksList/Content"); 
-            //.transform.Find("Background/Map/MapMask/RootMap")?.GetChild(0)?.GetChild(0);
             if (parent == null)
                 return;
 
             Log("Creating new location holder");
             _locationHolder = CreateRect(parent, "LocationHolder");
+            _cellHolder = parent.GetChild(0).GetChild(0);
 
-            var locations = new Vector2[] { new Vector2(28, 49) };
-
-            foreach (var location in locations)
+            foreach (var location in Data.MapLocations)
             {
                 var rect = CreateRect(_locationHolder, "locId");
-                rect.localPosition = location * 48;
+                rect.localPosition = location.Key * 48;
                 rect.sizeDelta = new Vector2(30, 30);
 
-                rect.gameObject.AddComponent<Image>().sprite = _locationImage;
+                var image = rect.gameObject.AddComponent<Image>();
+                image.sprite = _locationImage;
+                image.color = Color.red;
             }
         }
 
