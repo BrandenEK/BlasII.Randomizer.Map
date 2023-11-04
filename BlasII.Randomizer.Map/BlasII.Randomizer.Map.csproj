@@ -1,17 +1,25 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
     <TargetFramework>net6.0</TargetFramework>
 
-    <TargetName>RandoMap</TargetName>
+    <Title>Rando Map</Title>
     <Product>Rando Map</Product>
+    <Authors>Damocles</Authors>
     <Company>Damocles</Company>
+    <Description>An in-game map tracker for the Blasphemous 2 Randomizer</Description>
     <Version>0.1.0</Version>
+    
+    <TargetName>RandoMap</TargetName>
+    <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
+    <RepositoryUrl>https://github.com/BrandenEK/BlasII.Randomizer.Map</RepositoryUrl>
+    <AppendTargetFrameworkToOutputPath>false</AppendTargetFrameworkToOutputPath>
   </PropertyGroup>
 
   <ItemGroup>
     <PackageReference Include="BlasII.ModdingAPI" Version="0.4.0" />
     <PackageReference Include="BlasII.ModdingReferences" Version="1.1.0.2" />
+    <PackageReference Include="BlasII.Randomizer" Version="1.0.0" />
     <PackageReference Include="Il2CppInterop.Runtime" Version="1.4.5" />
     <PackageReference Include="LavaGang.MelonLoader" Version="0.6.1" />
     <PackageReference Include="Lib.Harmony" Version="2.2.2" />
