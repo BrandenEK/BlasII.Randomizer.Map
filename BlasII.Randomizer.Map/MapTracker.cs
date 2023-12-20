@@ -79,26 +79,29 @@ namespace BlasII.Randomizer.Map
             // Only do this next part if debug
 
             Transform location = _locationHolder.GetChild(_locationHolder.childCount - 1);
+            var movement = new Vector3();
+
             if (Input.GetKeyDown(KeyCode.Keypad5))
             {
-                location.localPosition = new Vector3(location.localPosition.x, location.localPosition.y + 48);
-                Log(location.localPosition / 48);
+                movement.y = 1;
             }
-            if (Input.GetKeyDown(KeyCode.Keypad2))
+            else if (Input.GetKeyDown(KeyCode.Keypad2))
             {
-                location.localPosition = new Vector3(location.localPosition.x, location.localPosition.y - 48);
-                Log(location.localPosition / 48);
+                movement.y = -1;
             }
             if (Input.GetKeyDown(KeyCode.Keypad1))
             {
-                location.localPosition = new Vector3(location.localPosition.x - 48, location.localPosition.y);
-                Log(location.localPosition / 48);
+                movement.x = -1;
             }
-            if (Input.GetKeyDown(KeyCode.Keypad3))
+            else if (Input.GetKeyDown(KeyCode.Keypad3))
             {
-                location.localPosition = new Vector3(location.localPosition.x + 48, location.localPosition.y);
-                Log(location.localPosition / 48);
+                movement.x = 1;
             }
+
+            location.localPosition += movement * 48 * (Input.GetKey(KeyCode.Keypad0) ? 3 : 1);
+
+            if (Input.GetKeyDown(KeyCode.KeypadEnter))
+                Log($"x: {location.localPosition.x / 48}, y: {location.localPosition.y / 48}");
         }
 
         private void CreateLocationHolder()
