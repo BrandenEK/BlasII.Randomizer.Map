@@ -1,0 +1,57 @@
+[
+  {
+    "x": 28.0,
+    "y": 49.0,
+    "locations": [ "Location" ]
+  },
+  {
+    "x": 23.0,
+    "y": 43.0,
+    "locations": [ "Location" ]
+  },
+  {
+    "x": 29.5,
+    "y": 42.0,
+    "locations": [ "Location" ]
+  },
+  {
+    "x": 28.0,
+    "y": 43.0,
+    "locations": [ "Location" ]
+  },
+  {
+    "x": 40.0,
+    "y": 35.0,
+    "locations": [ "Location" ]
+  },
+  {
+    "x": 42.0,
+    "y": 43.0,
+    "locations": [ "Location" ]
+  },
+  {
+    "x": 43.0,
+    "y": 43.0,
+    "locations": [ "Location" ]
+  },
+  {
+    "x": 38.0,
+    "y": 43.0,
+    "locations": [ "Location" ]
+  },
+  {
+    "x": 39.0,
+    "y": 42.0,
+    "locations": [ "Location" ]
+  },
+  {
+    "x": 38.0,
+    "y": 44.0,
+    "locations": [ "Location" ]
+  },
+  {
+    "x": 42.0,
+    "y": 44.0,
+    "locations": [ "Location" ]
+  }
+]

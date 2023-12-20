@@ -1,7 +1,6 @@
 ﻿using BlasII.ModdingAPI;
 using BlasII.ModdingAPI.UI;
 using Il2CppTGK.Game.Components.UI;
-using Newtonsoft.Json;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
@@ -14,6 +13,7 @@ namespace BlasII.Randomizer.Map
         private Transform _cellHolder;
 
         private Sprite _locationImage;
+        private readonly Dictionary<Vector2, string[]> _locationData = new(); // Change to real data later
 
         public MapTracker() : base(ModInfo.MOD_ID, ModInfo.MOD_NAME, ModInfo.MOD_AUTHOR, ModInfo.MOD_VERSION) { }
 
@@ -25,6 +25,22 @@ namespace BlasII.Randomizer.Map
             {
                 RefreshInventory();
             });
+
+            LoadLocationData();
+        }
+
+        private void LoadLocationData()
+        {
+            if (!FileHandler.LoadDataAsJson("locations.json", out LocationData[] locations))
+            {
+                LogError("Failed to load location data!");
+                return;
+            }
+
+            foreach (var data in locations)
+            {
+                _locationData.Add(new Vector2(data.x, data.y), data.locations);
+            }
         }
 
         public void RefreshMap()
@@ -95,7 +111,7 @@ namespace BlasII.Randomizer.Map
             _locationHolder = UIModder.CreateRect("LocationHolder", parent);
             _cellHolder = parent.GetChild(0).GetChild(0);
 
-            foreach (var location in Data.MapLocations)
+            foreach (var location in _locationData)
             {
                 var rect = UIModder.CreateRect($"Location {location.Key}", _locationHolder);
                 rect.localPosition = location.Key * 48;
@@ -105,18 +121,6 @@ namespace BlasII.Randomizer.Map
                 image.sprite = _locationImage;
                 image.color = Color.red;
             }
-        }
-
-        private void ExportLocations()
-        {
-            List<LocationData> locations = new();
-            foreach (var location in Data.MapLocations)
-            {
-                locations.Add(new LocationData(location.Key.x, location.Key.y, location.Value));
-            }
-
-            string json = JsonConvert.SerializeObject(locations, Formatting.Indented);
-            FileHandler.WriteToFile("locations.txt", json);
         }
     }
 }
