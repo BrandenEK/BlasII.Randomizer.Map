@@ -1,6 +1,8 @@
 ﻿using BlasII.ModdingAPI;
-using Il2CppInterop.Runtime;
+using BlasII.ModdingAPI.UI;
 using Il2CppTGK.Game.Components.UI;
+using Newtonsoft.Json;
+using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -18,12 +20,17 @@ namespace BlasII.Randomizer.Map
         protected override void OnInitialize()
         {
             FileHandler.LoadDataAsSprite("marker.png", out _locationImage, 10, true);
+            MessageHandler.AllowReceivingBroadcasts = true;
+            MessageHandler.AddMessageListener("BlasII.Randomizer", "LOCATION", (content) =>
+            {
+                RefreshInventory();
+            });
         }
 
         public void RefreshMap()
         {
             var map = Object.FindObjectOfType<MapWindowLogic>();
-            LogWarning(map.transform.DisplayHierarchy(10, true));
+            //LogWarning(map.transform.DisplayHierarchy(10, true));
 
             // Create location holder and move to top
             if (_locationHolder == null)
@@ -38,6 +45,12 @@ namespace BlasII.Randomizer.Map
             _locationHolder.SetAsLastSibling();
 
             // Update logic status for all cells
+        }
+
+        public void RefreshInventory()
+        {
+            Log("Recalculating inventory");
+            // Recalculate inventory based on items
         }
 
         public void UpdateMap()
@@ -79,12 +92,12 @@ namespace BlasII.Randomizer.Map
                 return;
 
             Log("Creating new location holder");
-            _locationHolder = CreateRect(parent, "LocationHolder");
+            _locationHolder = UIModder.CreateRect("LocationHolder", parent);
             _cellHolder = parent.GetChild(0).GetChild(0);
 
             foreach (var location in Data.MapLocations)
             {
-                var rect = CreateRect(_locationHolder, "locId");
+                var rect = UIModder.CreateRect($"Location {location.Key}", _locationHolder);
                 rect.localPosition = location.Key * 48;
                 rect.sizeDelta = new Vector2(30, 30);
 
@@ -94,12 +107,16 @@ namespace BlasII.Randomizer.Map
             }
         }
 
-        private RectTransform CreateRect(Transform parent, string name)
+        private void ExportLocations()
         {
-            var obj = new GameObject(name, Il2CppType.From(typeof(RectTransform)));
-            var rect = obj.GetComponent<RectTransform>();
-            rect.SetParent(parent, false);
-            return rect;
+            List<LocationData> locations = new();
+            foreach (var location in Data.MapLocations)
+            {
+                locations.Add(new LocationData(location.Key.x, location.Key.y, location.Value));
+            }
+
+            string json = JsonConvert.SerializeObject(locations, Formatting.Indented);
+            FileHandler.WriteToFile("locations.txt", json);
         }
     }
 }
