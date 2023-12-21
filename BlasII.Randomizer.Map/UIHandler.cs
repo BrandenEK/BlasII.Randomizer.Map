@@ -88,9 +88,10 @@ namespace BlasII.Randomizer.Map
         /// </summary>
         private void CreateLocationHolder()
         {
-            var parent = Object.FindObjectOfType<MapWindowLogic>()?.mapContent;
-            if (parent == null)
-                return;
+            var map = Object.FindObjectOfType<MapWindowLogic>();
+
+            var parent = map?.mapContent;
+            if (parent == null) return;
 
             Main.MapTracker.Log("Creating new location holder");
             _locationHolder = UIModder.CreateRect("LocationHolder", parent);
@@ -108,6 +109,11 @@ namespace BlasII.Randomizer.Map
 
                 location.Value.Image = image;
             }
+
+            var marks = map?.marksList?.transform.GetChild(0);
+            if (marks == null) return;
+
+            Object.Destroy(marks.gameObject);
         }
     }
 }
