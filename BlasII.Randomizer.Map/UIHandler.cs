@@ -27,7 +27,7 @@ namespace BlasII.Randomizer.Map
         /// <summary>
         /// Recalculate the reachability for all locations
         /// </summary>
-        public void Refresh(Blas2Inventory inventory)
+        public void Refresh(Blas2Inventory inventory, bool show)
         {
             // Create location holder and name text
             if (_locationHolder == null)
@@ -37,7 +37,7 @@ namespace BlasII.Randomizer.Map
 
             // Update visibility of location holder
             _locationHolder.SetAsLastSibling();
-            _locationHolder.gameObject.SetActive(Main.MapTracker.DisplayLocations);
+            _locationHolder.gameObject.SetActive(show && Main.MapTracker.DisplayLocations);
 
             // Update logic status for all cells
             foreach (var location in Main.MapTracker.AllLocations.Values)

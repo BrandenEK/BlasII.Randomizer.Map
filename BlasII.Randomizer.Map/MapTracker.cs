@@ -69,7 +69,7 @@ namespace BlasII.Randomizer.Map
             if (InputHandler.GetKeyDown("ToggleLocations"))
             {
                 DisplayLocations = !DisplayLocations;
-                _ui.Refresh(_inventory.CurrentInventory);
+                _ui.Refresh(_inventory.CurrentInventory, true);
             }
 
             _ui.Update(_inventory.CurrentInventory);
@@ -78,12 +78,15 @@ namespace BlasII.Randomizer.Map
         public void OnOpenMap()
         {
             IsMapOpen = true;
-            _ui.Refresh(_inventory.CurrentInventory);
+            _ui.Refresh(_inventory.CurrentInventory, true);
         }
 
         public void OnCloseMap()
         {
             IsMapOpen = false;
         }
+
+        public void OnZoomIn() => _ui.Refresh(_inventory.CurrentInventory, true);
+        public void OnZoomOut() => _ui.Refresh(_inventory.CurrentInventory, false);
     }
 }
