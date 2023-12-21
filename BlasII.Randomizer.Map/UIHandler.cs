@@ -1,4 +1,5 @@
-﻿using BlasII.ModdingAPI.UI;
+﻿using BlasII.ModdingAPI.Input;
+using BlasII.ModdingAPI.UI;
 using BlasII.Randomizer.Items;
 using Il2CppTGK.Game.Components.UI;
 using UnityEngine;
@@ -13,6 +14,10 @@ namespace BlasII.Randomizer.Map
         private UIPixelTextWithShadow _nameText;
 
         private Sprite _locationImage;
+
+        private Vector2 _lastCursor;
+        private Vector2 _currentCursor;
+        private int _selectedIndex = 0;
 
         /// <summary>
         /// Store the marker image
@@ -49,6 +54,19 @@ namespace BlasII.Randomizer.Map
         /// </summary>
         public void Update(Blas2Inventory inventory)
         {
+            // Process changing cursor positions
+            _currentCursor = CalculateCursorPosition();
+            if (_currentCursor != _lastCursor)
+                _selectedIndex = 0;
+            _lastCursor = _currentCursor;
+
+            // Process bumper input
+            if (Main.MapTracker.InputHandler.GetButtonDown(ButtonType.UIBumperLeft))
+                _selectedIndex--;
+            if (Main.MapTracker.InputHandler.GetButtonDown(ButtonType.UIBumperRight))
+                _selectedIndex++;
+
+            // Process location holder and name text
             UpdateLocationHolder();
             UpdateNameText(inventory);
 
@@ -94,21 +112,16 @@ namespace BlasII.Randomizer.Map
             if (_nameText == null)
                 return;
 
-            // Calculate cursor position
-            int x = (int)(_locationHolder.localPosition.x / -48 + 0.5f);
-            int y = (int)(_locationHolder.localPosition.y / -48 + 0.5f);
-            var cursorPosition = new Vector2(x, y);
-
             // Ensure that the cursor is over a location
-            if (!Main.MapTracker.AllLocations.TryGetValue(cursorPosition, out var location))
+            if (!Main.MapTracker.AllLocations.TryGetValue(_currentCursor, out var location))
             {
                 _nameText.SetText(string.Empty);
                 return;
             }
 
             // Set text and color based on hovered location
-            _nameText.SetText(location.GetNameAtIndex(0));
-            _nameText.SetColor(Colors.LogicColors[location.GetReachabilityAtIndex(0, inventory)]);
+            _nameText.SetText(location.GetNameAtIndex(_selectedIndex));
+            _nameText.SetColor(Colors.LogicColors[location.GetReachabilityAtIndex(_selectedIndex, inventory)]);
         }
 
         /// <summary>
@@ -154,6 +167,13 @@ namespace BlasII.Randomizer.Map
             // Create text for location name
             Main.MapTracker.Log("Creating new name text");
             _nameText = UIModder.CreateRect("LocationName", parent).AddText().SetFontSize(50).AddShadow();
+        }
+
+        private Vector2 CalculateCursorPosition()
+        {
+            int x = (int)(_locationHolder.localPosition.x / -48 + 0.5f);
+            int y = (int)(_locationHolder.localPosition.y / -48 + 0.5f);
+            return new Vector2(x, y);
         }
     }
 }

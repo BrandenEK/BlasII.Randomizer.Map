@@ -30,6 +30,8 @@ namespace BlasII.Randomizer.Map
             return GetReachability(inventory);
         }
 
-        public string GetNameAtIndex(int index) => Main.Randomizer.Data.GetItemLocation(_ids[index]).name;
+        public string GetNameAtIndex(int index) => Main.Randomizer.Data.GetItemLocation(_ids[GetValidIndex(index)]).name;
+
+        private int GetValidIndex(int index) => (index %= _ids.Length) < 0 ? index + _ids.Length : index;
     }
 }
