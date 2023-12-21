@@ -1,6 +1,4 @@
 ﻿using BlasII.Randomizer.Items;
-using BlasII.Randomizer.Map.Locations;
-using UnityEngine;
 using UnityEngine.UI;
 
 namespace BlasII.Randomizer.Map
@@ -16,14 +14,45 @@ namespace BlasII.Randomizer.Map
 
         public Logic GetReachability(Blas2Inventory inventory)
         {
-            int rand = Random.Range(0, 4);
-            return rand switch
+            int numGreen = 0, numRed = 0;
+
+            foreach (string id in _ids)
             {
-                0 => Logic.Finished,
-                1 => Logic.NoneReachable,
-                2 => Logic.SomeReachable,
-                _ => Logic.AllReachable,
-            };
+                if (IsLocationCollected(id))
+                    continue;
+
+                ItemLocation location = Main.Randomizer.Data.GetItemLocation(id);
+                if (inventory.Evaluate(location.logic))
+                    numGreen++;
+                else
+                    numRed++;
+            }
+
+            if (numGreen == 0 && numRed == 0)
+                return Logic.Finished;
+            else if (numGreen == 0)
+                return Logic.NoneReachable;
+            else if (numRed == 0)
+                return Logic.AllReachable;
+            else
+                return Logic.SomeReachable;
         }
+
+        public Logic GetReachabilityAtIndex(int index, Blas2Inventory inventory)
+        {
+            int validIndex = GetValidIndex(index);
+
+            if (IsLocationCollected(_ids[validIndex]))
+                return Logic.Finished;
+
+            ItemLocation location = Main.Randomizer.Data.GetItemLocation(_ids[validIndex]);
+            return inventory.Evaluate(location.logic) ? Logic.AllReachable : Logic.NoneReachable;
+        }
+
+        public string GetNameAtIndex(int index) => Main.Randomizer.Data.GetItemLocation(_ids[GetValidIndex(index)]).name;
+
+        private int GetValidIndex(int index) => (index %= _ids.Length) < 0 ? index + _ids.Length : index;
+
+        private bool IsLocationCollected(string id) => Main.Randomizer.ItemHandler.CollectedLocations.Contains(id);
     }
 }

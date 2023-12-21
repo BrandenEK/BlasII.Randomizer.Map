@@ -21,6 +21,15 @@ namespace BlasII.Randomizer.Map
     }
 
     /// <summary>
+    /// Always prevent placing marks
+    /// </summary>
+    [HarmonyPatch(typeof(MapWindowLogic), nameof(MapWindowLogic.CanPlaceMarker))]
+    class Map_Marker_Patch
+    {
+        public static bool Prefix(ref bool __result) => __result = false;
+    }
+
+    /// <summary>
     /// Reveal the entire map if locations are showing
     /// </summary>
     [HarmonyPatch(typeof(MapManager), nameof(MapManager.GetRevealedCells))]
