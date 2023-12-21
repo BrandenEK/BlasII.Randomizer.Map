@@ -1,5 +1,4 @@
 ﻿using BlasII.Randomizer.Items;
-using UnityEngine;
 using UnityEngine.UI;
 
 namespace BlasII.Randomizer.Map
@@ -18,14 +17,8 @@ namespace BlasII.Randomizer.Map
             if (IsCollected)
                 return Logic.Finished;
 
-            int rand = Random.Range(1, 4);
-            return rand switch
-            {
-                0 => Logic.Finished,
-                1 => Logic.NoneReachable,
-                2 => Logic.SomeReachable,
-                _ => Logic.AllReachable,
-            };
+            ItemLocation location = Main.Randomizer.Data.GetItemLocation(_id);
+            return inventory.Evaluate(location.logic) ? Logic.AllReachable : Logic.NoneReachable;
         }
 
         private bool IsCollected => Main.Randomizer.ItemHandler.CollectedLocations.Contains(_id);

@@ -1,4 +1,5 @@
 ﻿using BlasII.Randomizer.Items;
+using UnityEngine;
 
 namespace BlasII.Randomizer.Map
 {
@@ -29,6 +30,12 @@ namespace BlasII.Randomizer.Map
             var randomizer = BlasII.Randomizer.Main.Randomizer;
 
             _currentInventory = new Blas2Inventory(randomizer.CurrentSettings, randomizer.Data.DoorDictionary);
+
+            if (Random.Range(0, 2) == 0)
+            {
+                _currentInventory.AddItem(Main.Randomizer.Data.GetItem("AB02"));
+                Main.MapTracker.Log("Adding dbl jump");
+            }
         }
     }
 }
