@@ -57,6 +57,12 @@ namespace BlasII.Randomizer.Map
             }
         }
 
+        protected override void OnSceneLoaded(string sceneName)
+        {
+            if (sceneName == "MainMenu")
+                _inventory.Refresh();
+        }
+
         public void OnOpenMap()
         {
             IsMapOpen = true;
