@@ -1,4 +1,5 @@
 ﻿using BlasII.Randomizer.Items;
+using BlasII.Randomizer.Map.Locations;
 using UnityEngine;
 using UnityEngine.UI;
 

@@ -1,5 +1,6 @@
 ﻿using BlasII.ModdingAPI;
 using BlasII.ModdingAPI.UI;
+using BlasII.Randomizer.Map.Locations;
 using Il2CppTGK.Game.Components.UI;
 using System.Collections.Generic;
 using UnityEngine;
