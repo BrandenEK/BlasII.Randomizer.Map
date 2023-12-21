@@ -1,6 +1,5 @@
 ﻿using BlasII.ModdingAPI;
 using BlasII.ModdingAPI.UI;
-using Il2CppTGK.Game;
 using Il2CppTGK.Game.Components.UI;
 using System.Collections.Generic;
 using UnityEngine;
@@ -14,7 +13,7 @@ namespace BlasII.Randomizer.Map
         private Transform _cellHolder;
 
         private Sprite _locationImage;
-        private readonly Dictionary<Vector2, string[]> _locationData = new(); // Change to real data later
+        private readonly Dictionary<Vector2, ILocation> _locationData = new();
 
         public bool IsMapOpen { get; private set; } = false;
         public bool DisplayLocations { get; private set; } = true;
@@ -47,7 +46,12 @@ namespace BlasII.Randomizer.Map
 
             foreach (var data in locations)
             {
-                _locationData.Add(new Vector2(data.x, data.y), data.locations);
+                if (data.locations == null || data.locations.Length == 0)
+                    continue;
+
+                _locationData.Add(new Vector2(data.x, data.y), data.locations.Length == 1
+                    ? new SingleLocation(data.locations[0])
+                    : new MultipleLocation(data.locations));
             }
         }
 
@@ -77,10 +81,15 @@ namespace BlasII.Randomizer.Map
                 }
             }
 
+            // Update visibility of location holder
             _locationHolder.SetAsLastSibling();
             _locationHolder.gameObject.SetActive(DisplayLocations);
 
             // Update logic status for all cells
+            foreach (var location in _locationData.Values)
+            {
+                location.Image.color = Random.Range(0, 2) == 0 ? Color.green : Color.red;
+            }
         }
 
         public void RefreshInventory()
@@ -149,6 +158,8 @@ namespace BlasII.Randomizer.Map
                 var image = rect.gameObject.AddComponent<Image>();
                 image.sprite = _locationImage;
                 image.color = Color.red;
+
+                location.Value.Image = image;
             }
         }
     }
