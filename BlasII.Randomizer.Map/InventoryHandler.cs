@@ -22,8 +22,14 @@ namespace BlasII.Randomizer.Map
             }
         }
 
+        /// <summary>
+        /// Force the inventory to be recalculated next time it is needed
+        /// </summary>
         public void Refresh() => _needsRefresh = true;
 
+        /// <summary>
+        /// Recalculate the inventory of the playthrough
+        /// </summary>
         private void CalculateInventory()
         {
             Main.MapTracker.Log("Calculating new inventory");
