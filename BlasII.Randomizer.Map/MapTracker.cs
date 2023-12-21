@@ -1,5 +1,6 @@
 ﻿using BlasII.ModdingAPI;
 using BlasII.ModdingAPI.UI;
+using BlasII.Randomizer.Map.Locations;
 using Il2CppTGK.Game.Components.UI;
 using System.Collections.Generic;
 using UnityEngine;
@@ -13,17 +14,25 @@ namespace BlasII.Randomizer.Map
         private Transform _cellHolder;
 
         private Sprite _locationImage;
-        private readonly Dictionary<Vector2, string[]> _locationData = new(); // Change to real data later
+        private readonly Dictionary<Vector2, ILocation> _locationData = new();
+        private readonly InventoryHandler _inventory = new();
+
+        public bool IsMapOpen { get; private set; } = false;
+        public bool DisplayLocations { get; private set; } = true;
 
         public MapTracker() : base(ModInfo.MOD_ID, ModInfo.MOD_NAME, ModInfo.MOD_AUTHOR, ModInfo.MOD_VERSION) { }
 
         protected override void OnInitialize()
         {
             FileHandler.LoadDataAsSprite("marker.png", out _locationImage, 10, true);
+            InputHandler.RegisterDefaultKeybindings(new Dictionary<string, KeyCode>()
+            {
+                { "ToggleLocations", KeyCode.F7 }
+            });
             MessageHandler.AllowReceivingBroadcasts = true;
             MessageHandler.AddMessageListener("BlasII.Randomizer", "LOCATION", (content) =>
             {
-                RefreshInventory();
+                _inventory.Refresh();
             });
 
             LoadLocationData();
@@ -39,15 +48,28 @@ namespace BlasII.Randomizer.Map
 
             foreach (var data in locations)
             {
-                _locationData.Add(new Vector2(data.x, data.y), data.locations);
+                if (data.locations == null || data.locations.Length == 0)
+                    continue;
+
+                _locationData.Add(new Vector2(data.x, data.y), data.locations.Length == 1
+                    ? new SingleLocation(data.locations[0])
+                    : new MultipleLocation(data.locations));
             }
+        }
+
+        public void OnOpenMap()
+        {
+            IsMapOpen = true;
+            RefreshMap();
+        }
+
+        public void OnCloseMap()
+        {
+            IsMapOpen = false;
         }
 
         public void RefreshMap()
         {
-            var map = Object.FindObjectOfType<MapWindowLogic>();
-            //LogWarning(map.transform.DisplayHierarchy(10, true));
-
             // Create location holder and move to top
             if (_locationHolder == null)
             {
@@ -58,15 +80,16 @@ namespace BlasII.Randomizer.Map
                     return;
                 }
             }
+
+            // Update visibility of location holder
             _locationHolder.SetAsLastSibling();
+            _locationHolder.gameObject.SetActive(DisplayLocations);
 
             // Update logic status for all cells
-        }
-
-        public void RefreshInventory()
-        {
-            Log("Recalculating inventory");
-            // Recalculate inventory based on items
+            foreach (var location in _locationData.Values)
+            {
+                location.Image.color = Colors.LogicColors[location.GetReachability(_inventory.CurrentInventory)];
+            }
         }
 
         public void UpdateMap()
@@ -75,6 +98,12 @@ namespace BlasII.Randomizer.Map
                 return;
 
             _locationHolder.position = _cellHolder.position;
+
+            if (InputHandler.GetKeyDown("ToggleLocations"))
+            {
+                DisplayLocations = !DisplayLocations;
+                RefreshMap();
+            }
 
             // Only do this next part if debug
 
@@ -123,6 +152,8 @@ namespace BlasII.Randomizer.Map
                 var image = rect.gameObject.AddComponent<Image>();
                 image.sprite = _locationImage;
                 image.color = Color.red;
+
+                location.Value.Image = image;
             }
         }
     }

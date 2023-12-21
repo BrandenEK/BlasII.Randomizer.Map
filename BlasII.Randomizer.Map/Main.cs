@@ -7,10 +7,12 @@ namespace BlasII.Randomizer.Map
     public class Main : MelonMod
     {
         public static MapTracker MapTracker { get; private set; }
+        public static Randomizer Randomizer { get; private set; }
 
         public override void OnLateInitializeMelon()
         {
             MapTracker = new MapTracker();
+            Randomizer = BlasII.Randomizer.Main.Randomizer;
         }
     }
 
