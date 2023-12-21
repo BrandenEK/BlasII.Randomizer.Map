@@ -14,6 +14,7 @@ namespace BlasII.Randomizer.Map
 
         private Sprite _locationImage;
         private readonly Dictionary<Vector2, ILocation> _locationData = new();
+        private readonly InventoryHandler _inventory = new();
 
         public bool IsMapOpen { get; private set; } = false;
         public bool DisplayLocations { get; private set; } = true;
@@ -30,7 +31,7 @@ namespace BlasII.Randomizer.Map
             MessageHandler.AllowReceivingBroadcasts = true;
             MessageHandler.AddMessageListener("BlasII.Randomizer", "LOCATION", (content) =>
             {
-                RefreshInventory();
+                _inventory.Refresh();
             });
 
             LoadLocationData();
@@ -68,8 +69,6 @@ namespace BlasII.Randomizer.Map
 
         public void RefreshMap()
         {
-            //var map = Object.FindObjectOfType<MapWindowLogic>();
-
             // Create location holder and move to top
             if (_locationHolder == null)
             {
@@ -84,18 +83,12 @@ namespace BlasII.Randomizer.Map
             // Update visibility of location holder
             _locationHolder.SetAsLastSibling();
             _locationHolder.gameObject.SetActive(DisplayLocations);
-            var inventory = new Items.Blas2Inventory(null, null);
+
             // Update logic status for all cells
             foreach (var location in _locationData.Values)
             {
-                location.Image.color = Colors.LogicColors[location.GetReachability(inventory)];
+                location.Image.color = Colors.LogicColors[location.GetReachability(_inventory.CurrentInventory)];
             }
-        }
-
-        public void RefreshInventory()
-        {
-            Log("Recalculating inventory");
-            // Recalculate inventory based on items
         }
 
         public void UpdateMap()
