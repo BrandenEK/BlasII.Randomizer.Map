@@ -21,15 +21,6 @@ namespace BlasII.Randomizer.Map
     }
 
     /// <summary>
-    /// Update the location positions whenever it is updated
-    /// </summary>
-    [HarmonyPatch(typeof(MapWindowLogic), nameof(MapWindowLogic.Update))]
-    class Map_Update_Patch
-    {
-        public static void Postfix() => Main.MapTracker.UpdateMap();
-    }
-
-    /// <summary>
     /// Reveal the entire map if locations are showing
     /// </summary>
     [HarmonyPatch(typeof(MapManager), nameof(MapManager.GetRevealedCells))]
