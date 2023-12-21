@@ -1,5 +1,4 @@
 ﻿using BlasII.Randomizer.Items;
-using BlasII.Randomizer.Map.Locations;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -25,5 +24,12 @@ namespace BlasII.Randomizer.Map
                 _ => Logic.AllReachable,
             };
         }
+
+        public Logic GetReachabilityAtIndex(int index, Blas2Inventory inventory)
+        {
+            return GetReachability(inventory);
+        }
+
+        public string GetNameAtIndex(int index) => Main.Randomizer.Data.GetItemLocation(_ids[index]).name;
     }
 }

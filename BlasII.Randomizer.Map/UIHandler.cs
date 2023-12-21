@@ -1,7 +1,6 @@
 ﻿using BlasII.ModdingAPI.UI;
 using BlasII.Randomizer.Items;
 using Il2CppTGK.Game.Components.UI;
-using Il2CppTMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -46,16 +45,12 @@ namespace BlasII.Randomizer.Map
         }
 
         /// <summary>
-        /// Update the position of the location holder
+        /// Update the position of the location holder and content of the name text
         /// </summary>
-        public void Update()
+        public void Update(Blas2Inventory inventory)
         {
-            if (_locationHolder == null)
-                return;
-
-            _locationHolder.position = _cellHolder.position;
-
-            _nameText.SetText("Location name");
+            UpdateLocationHolder();
+            UpdateNameText(inventory);
 
             // Only do this next part if debug
 
@@ -83,6 +78,37 @@ namespace BlasII.Randomizer.Map
 
             if (Input.GetKeyDown(KeyCode.KeypadEnter))
                 Main.MapTracker.Log($"x: {location.localPosition.x / 48}, y: {location.localPosition.y / 48}");
+        }
+
+        private void UpdateLocationHolder()
+        {
+            if (_locationHolder == null)
+                return;
+
+            // Scroll position to the cell holder's position
+            _locationHolder.position = _cellHolder.position;
+        }
+
+        private void UpdateNameText(Blas2Inventory inventory)
+        {
+            if (_nameText == null)
+                return;
+
+            // Calculate cursor position
+            int x = (int)(_locationHolder.localPosition.x / -48 + 0.5f);
+            int y = (int)(_locationHolder.localPosition.y / -48 + 0.5f);
+            var cursorPosition = new Vector2(x, y);
+
+            // Ensure that the cursor is over a location
+            if (!Main.MapTracker.AllLocations.TryGetValue(cursorPosition, out var location))
+            {
+                _nameText.SetText(string.Empty);
+                return;
+            }
+
+            // Set text and color based on hovered location
+            _nameText.SetText(location.GetNameAtIndex(0));
+            _nameText.SetColor(Colors.LogicColors[location.GetReachabilityAtIndex(0, inventory)]);
         }
 
         /// <summary>

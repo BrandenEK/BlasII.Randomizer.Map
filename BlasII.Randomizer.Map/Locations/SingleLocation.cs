@@ -21,6 +21,10 @@ namespace BlasII.Randomizer.Map.Locations
             return inventory.Evaluate(location.logic) ? Logic.AllReachable : Logic.NoneReachable;
         }
 
+        public Logic GetReachabilityAtIndex(int index, Blas2Inventory inventory) => GetReachability(inventory);
+
+        public string GetNameAtIndex(int index) => Main.Randomizer.Data.GetItemLocation(_id).name;
+
         private bool IsCollected => Main.Randomizer.ItemHandler.CollectedLocations.Contains(_id);
     }
 }

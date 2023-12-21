@@ -72,7 +72,7 @@ namespace BlasII.Randomizer.Map
                 _ui.Refresh(_inventory.CurrentInventory);
             }
 
-            _ui.Update();
+            _ui.Update(_inventory.CurrentInventory);
         }
 
         public void OnOpenMap()
