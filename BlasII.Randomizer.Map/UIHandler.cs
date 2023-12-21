@@ -1,6 +1,7 @@
 ﻿using BlasII.ModdingAPI.UI;
 using BlasII.Randomizer.Items;
 using Il2CppTGK.Game.Components.UI;
+using Il2CppTMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -10,6 +11,7 @@ namespace BlasII.Randomizer.Map
     {
         private Transform _locationHolder;
         private Transform _cellHolder;
+        private UIPixelTextWithShadow _nameText;
 
         private Sprite _locationImage;
 
@@ -23,16 +25,11 @@ namespace BlasII.Randomizer.Map
         /// </summary>
         public void Refresh(Blas2Inventory inventory)
         {
-            // Create location holder and move to top
+            // Create location holder and name text
             if (_locationHolder == null)
-            {
                 CreateLocationHolder();
-                if (_locationHolder == null)
-                {
-                    Main.MapTracker.LogError("Failed to create map location holder!");
-                    return;
-                }
-            }
+            if (_nameText == null)
+                CreateNameText();
 
             // Update visibility of location holder
             _locationHolder.SetAsLastSibling();
@@ -43,6 +40,9 @@ namespace BlasII.Randomizer.Map
             {
                 location.Image.color = Colors.LogicColors[location.GetReachability(inventory)];
             }
+
+            // Clear text for selected location name
+            _nameText.SetText(string.Empty);
         }
 
         /// <summary>
@@ -54,6 +54,8 @@ namespace BlasII.Randomizer.Map
                 return;
 
             _locationHolder.position = _cellHolder.position;
+
+            _nameText.SetText("Location name");
 
             // Only do this next part if debug
 
@@ -88,15 +90,15 @@ namespace BlasII.Randomizer.Map
         /// </summary>
         private void CreateLocationHolder()
         {
-            var map = Object.FindObjectOfType<MapWindowLogic>();
-
-            var parent = map?.mapContent;
+            var parent = Object.FindObjectOfType<MapWindowLogic>()?.mapContent;
             if (parent == null) return;
 
+            // Create rect for ui holder
             Main.MapTracker.Log("Creating new location holder");
             _locationHolder = UIModder.CreateRect("LocationHolder", parent);
             _cellHolder = parent.GetChild(0).GetChild(0);
 
+            // Create image for each item location
             foreach (var location in Main.MapTracker.AllLocations)
             {
                 var rect = UIModder.CreateRect($"Location {location.Key}", _locationHolder);
@@ -109,11 +111,23 @@ namespace BlasII.Randomizer.Map
 
                 location.Value.Image = image;
             }
+        }
 
-            var marks = map?.marksList?.transform.GetChild(0);
-            if (marks == null) return;
+        /// <summary>
+        /// Create the UI for the selected location name
+        /// </summary>
+        private void CreateNameText()
+        {
+            var parent = Object.FindObjectOfType<MapWindowLogic>()?.marksList?.transform;
+            if (parent == null) return;
 
-            Object.Destroy(marks.gameObject);
+            // Remove mark ui
+            if (parent.GetChild(0))
+                Object.Destroy(parent.GetChild(0).gameObject);
+
+            // Create text for location name
+            Main.MapTracker.Log("Creating new name text");
+            _nameText = UIModder.CreateRect("LocationName", parent).AddText().SetFontSize(50).AddShadow();
         }
     }
 }
