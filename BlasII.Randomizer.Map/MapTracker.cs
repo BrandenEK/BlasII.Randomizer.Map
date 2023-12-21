@@ -84,11 +84,11 @@ namespace BlasII.Randomizer.Map
             // Update visibility of location holder
             _locationHolder.SetAsLastSibling();
             _locationHolder.gameObject.SetActive(DisplayLocations);
-
+            var inventory = new Items.Blas2Inventory(null, null);
             // Update logic status for all cells
             foreach (var location in _locationData.Values)
             {
-                location.Image.color = Random.Range(0, 2) == 0 ? Color.green : Color.red;
+                location.Image.color = Colors.LogicColors[location.GetReachability(inventory)];
             }
         }
 
