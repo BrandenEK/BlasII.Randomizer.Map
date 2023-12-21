@@ -15,7 +15,10 @@ namespace BlasII.Randomizer.Map
 
         public Logic GetReachability(Blas2Inventory inventory)
         {
-            int rand = Random.Range(0, 4);
+            if (IsCollected)
+                return Logic.Finished;
+
+            int rand = Random.Range(1, 4);
             return rand switch
             {
                 0 => Logic.Finished,
@@ -24,5 +27,7 @@ namespace BlasII.Randomizer.Map
                 _ => Logic.AllReachable,
             };
         }
+
+        private bool IsCollected => Main.Randomizer.ItemHandler.CollectedLocations.Contains(_id);
     }
 }
