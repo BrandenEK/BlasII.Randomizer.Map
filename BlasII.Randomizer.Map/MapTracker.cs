@@ -1,5 +1,6 @@
 ﻿using BlasII.ModdingAPI;
 using BlasII.ModdingAPI.UI;
+using Il2CppTGK.Game;
 using Il2CppTGK.Game.Components.UI;
 using System.Collections.Generic;
 using UnityEngine;
@@ -15,11 +16,18 @@ namespace BlasII.Randomizer.Map
         private Sprite _locationImage;
         private readonly Dictionary<Vector2, string[]> _locationData = new(); // Change to real data later
 
+        public bool IsMapOpen { get; private set; } = false;
+        public bool DisplayLocations { get; private set; } = true;
+
         public MapTracker() : base(ModInfo.MOD_ID, ModInfo.MOD_NAME, ModInfo.MOD_AUTHOR, ModInfo.MOD_VERSION) { }
 
         protected override void OnInitialize()
         {
             FileHandler.LoadDataAsSprite("marker.png", out _locationImage, 10, true);
+            InputHandler.RegisterDefaultKeybindings(new Dictionary<string, KeyCode>()
+            {
+                { "ToggleLocations", KeyCode.F7 }
+            });
             MessageHandler.AllowReceivingBroadcasts = true;
             MessageHandler.AddMessageListener("BlasII.Randomizer", "LOCATION", (content) =>
             {
@@ -43,10 +51,20 @@ namespace BlasII.Randomizer.Map
             }
         }
 
+        public void OnOpenMap()
+        {
+            IsMapOpen = true;
+            RefreshMap();
+        }
+
+        public void OnCloseMap()
+        {
+            IsMapOpen = false;
+        }
+
         public void RefreshMap()
         {
-            var map = Object.FindObjectOfType<MapWindowLogic>();
-            //LogWarning(map.transform.DisplayHierarchy(10, true));
+            //var map = Object.FindObjectOfType<MapWindowLogic>();
 
             // Create location holder and move to top
             if (_locationHolder == null)
@@ -58,7 +76,9 @@ namespace BlasII.Randomizer.Map
                     return;
                 }
             }
+
             _locationHolder.SetAsLastSibling();
+            _locationHolder.gameObject.SetActive(DisplayLocations);
 
             // Update logic status for all cells
         }
@@ -75,6 +95,12 @@ namespace BlasII.Randomizer.Map
                 return;
 
             _locationHolder.position = _cellHolder.position;
+
+            if (InputHandler.GetKeyDown("ToggleLocations"))
+            {
+                DisplayLocations = !DisplayLocations;
+                RefreshMap();
+            }
 
             // Only do this next part if debug
 
