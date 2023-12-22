@@ -1,5 +1,6 @@
 ﻿using BlasII.ModdingAPI.Input;
 using BlasII.ModdingAPI.UI;
+using BlasII.ModdingAPI.Utils;
 using BlasII.Randomizer.Items;
 using Il2CppTGK.Game.Components.UI;
 using UnityEngine;
@@ -129,13 +130,17 @@ namespace BlasII.Randomizer.Map
         /// </summary>
         private void CreateLocationHolder()
         {
-            var parent = Object.FindObjectOfType<MapWindowLogic>()?.mapContent;
+            var parent = MapHolder;
             if (parent == null) return;
+
+            // Remove radar ui
+            Object.Destroy(NormalRenderer.GetChild(1).gameObject);
+            Object.Destroy(ZoomedRenderer.GetChild(1).gameObject);
 
             // Create rect for ui holder
             Main.MapTracker.Log("Creating new location holder");
             _locationHolder = UIModder.CreateRect("LocationHolder", parent);
-            _cellHolder = parent.GetChild(0).GetChild(0);
+            _cellHolder = NormalRenderer.GetChild(0);
 
             // Create image for each item location
             foreach (var location in Main.MapTracker.AllLocations)
@@ -157,11 +162,11 @@ namespace BlasII.Randomizer.Map
         /// </summary>
         private void CreateNameText()
         {
-            var parent = Object.FindObjectOfType<MapWindowLogic>()?.marksList?.transform;
+            var parent = MarksHolder;
             if (parent == null) return;
 
             // Remove mark ui
-            if (parent.GetChild(0))
+            if (parent.GetChild(0) != null)
                 Object.Destroy(parent.GetChild(0).gameObject);
 
             // Create text for location name
@@ -175,5 +180,11 @@ namespace BlasII.Randomizer.Map
             int y = (int)(_locationHolder.localPosition.y / -48 + 0.5f);
             return new Vector2(x, y);
         }
+
+        private readonly ObjectCache<MapWindowLogic> _mapCache = new(() => Object.FindObjectOfType<MapWindowLogic>());
+        private Transform MapHolder => _mapCache.Value?.mapContent;
+        private Transform MarksHolder => _mapCache.Value?.marksList.transform;
+        private Transform NormalRenderer => MapHolder.GetChild(0);
+        private Transform ZoomedRenderer => MapHolder.GetChild(1);
     }
 }
