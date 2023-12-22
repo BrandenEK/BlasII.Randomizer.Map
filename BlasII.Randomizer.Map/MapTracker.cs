@@ -10,8 +10,8 @@ namespace BlasII.Randomizer.Map
         private readonly InventoryHandler _inventory = new();
         private readonly UIHandler _ui = new();
 
-        private readonly Dictionary<Vector2, ILocation> _locationData = new();
-        internal Dictionary<Vector2, ILocation> AllLocations => _locationData;
+        private readonly Dictionary<Vector2Int, ILocation> _locationData = new();
+        internal Dictionary<Vector2Int, ILocation> AllLocations => _locationData;
 
         public bool IsMapOpen { get; private set; } = false;
         public bool DisplayLocations { get; private set; } = true;
@@ -50,7 +50,7 @@ namespace BlasII.Randomizer.Map
                 if (data.locations == null || data.locations.Length == 0)
                     continue;
 
-                _locationData.Add(new Vector2(data.x, data.y), data.locations.Length == 1
+                _locationData.Add(new Vector2Int(data.x, data.y), data.locations.Length == 1
                     ? new SingleLocation(data.locations[0])
                     : new MultipleLocation(data.locations));
             }

@@ -16,8 +16,8 @@ namespace BlasII.Randomizer.Map
 
         private Sprite _locationImage;
 
-        private Vector2 _lastCursor;
-        private Vector2 _currentCursor;
+        private Vector2Int _lastCursor;
+        private Vector2Int _currentCursor;
         private int _selectedIndex = 0;
 
         /// <summary>
@@ -146,7 +146,7 @@ namespace BlasII.Randomizer.Map
             foreach (var location in Main.MapTracker.AllLocations)
             {
                 var rect = UIModder.CreateRect($"Location {location.Key}", _locationHolder);
-                rect.localPosition = location.Key * 48;
+                rect.localPosition = new Vector3(location.Key.x * 48, location.Key.y * 48);
                 rect.sizeDelta = new Vector2(30, 30);
 
                 var image = rect.gameObject.AddComponent<Image>();
@@ -174,11 +174,11 @@ namespace BlasII.Randomizer.Map
             _nameText = UIModder.CreateRect("LocationName", parent).AddText().SetFontSize(50).AddShadow();
         }
 
-        private Vector2 CalculateCursorPosition()
+        private Vector2Int CalculateCursorPosition()
         {
             int x = (int)(_locationHolder.localPosition.x / -48 + 0.5f);
             int y = (int)(_locationHolder.localPosition.y / -48 + 0.5f);
-            return new Vector2(x, y);
+            return new Vector2Int(x, y);
         }
 
         private readonly ObjectCache<MapWindowLogic> _mapCache = new(() => Object.FindObjectOfType<MapWindowLogic>());

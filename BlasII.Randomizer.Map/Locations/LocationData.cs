@@ -1,13 +1,13 @@
 ﻿
-namespace BlasII.Randomizer.Map
+namespace BlasII.Randomizer.Map.Locations
 {
     internal class LocationData
     {
-        public readonly float x;
-        public readonly float y;
+        public readonly int x;
+        public readonly int y;
         public readonly string[] locations;
 
-        public LocationData(float x, float y, string[] locations)
+        public LocationData(int x, int y, string[] locations)
         {
             this.x = x;
             this.y = y;
