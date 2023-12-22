@@ -21,6 +21,20 @@ namespace BlasII.Randomizer.Map
     }
 
     /// <summary>
+    /// Toggle location display when zooming the map
+    /// </summary>
+    [HarmonyPatch(typeof(MapWindowLogic), nameof(MapWindowLogic.ZoomIn))]
+    class Map_ZoomIn_Patch
+    {
+        public static void Postfix() => Main.MapTracker.OnZoomIn();
+    }
+    [HarmonyPatch(typeof(MapWindowLogic), nameof(MapWindowLogic.ZoomOut))]
+    class Map_ZoomOut_Patch
+    {
+        public static void Postfix() => Main.MapTracker.OnZoomOut();
+    }
+
+    /// <summary>
     /// Always prevent placing marks
     /// </summary>
     [HarmonyPatch(typeof(MapWindowLogic), nameof(MapWindowLogic.CanPlaceMarker))]
