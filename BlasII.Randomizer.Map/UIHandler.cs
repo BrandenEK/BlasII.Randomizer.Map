@@ -114,7 +114,7 @@ namespace BlasII.Randomizer.Map
                 return;
 
             // Ensure that the cursor is over a location
-            if (!Main.MapTracker.AllLocations.TryGetValue(_currentCursor, out var location))
+            if (!Main.MapTracker.AllLocations.TryGetValue(_currentCursor, out var location) || !Main.MapTracker.DisplayLocations)
             {
                 _nameText.SetText(string.Empty);
                 return;
