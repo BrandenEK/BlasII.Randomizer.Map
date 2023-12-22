@@ -17,7 +17,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="BlasII.ModdingAPI" Version="0.8.0" />
+    <PackageReference Include="BlasII.ModdingAPI" Version="0.8.1" />
     <PackageReference Include="BlasII.ModdingReferences" Version="1.1.0.2" />
     <PackageReference Include="BlasII.Randomizer" Version="1.0.0" />
   </ItemGroup>
