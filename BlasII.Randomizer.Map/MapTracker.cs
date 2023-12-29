@@ -1,4 +1,5 @@
 ﻿using BlasII.ModdingAPI;
+using BlasII.ModdingAPI.Files;
 using BlasII.Randomizer.Map.Locations;
 using System.Collections.Generic;
 using UnityEngine;
@@ -20,7 +21,7 @@ namespace BlasII.Randomizer.Map
 
         protected override void OnInitialize()
         {
-            if (FileHandler.LoadDataAsSprite("marker.png", out Sprite image, 10, true))
+            if (FileHandler.LoadDataAsSprite("marker.png", out Sprite image, new SpriteImportOptions() { PixelsPerUnit = 10 }))
             {
                 _ui.LoadImage(image);
             }
