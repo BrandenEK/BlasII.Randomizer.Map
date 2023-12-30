@@ -508,455 +508,215 @@
     "y": 58,
     "locations": [ "SHOPITINERANT.o4" ]
   },
-  
+// Elevated Temples
   {
-    "x": ,
-    "y": ,
-    "locations": [ "" ]
+    "x": 56,
+    "y": 59,
+    "locations": [ "Z1003.l0" ]
   },
   {
-    "x": ,
-    "y": ,
-    "locations": [ "" ]
+    "x": 54,
+    "y": 60,
+    "locations": [ "Z1004.l10" ]
   },
   {
-    "x": ,
-    "y": ,
-    "locations": [ "" ]
+    "x": 47,
+    "y": 61,
+    "locations": [ "Z1007.l2" ]
   },
   {
-    "x": ,
-    "y": ,
-    "locations": [ "" ]
+    "x": 55,
+    "y": 62,
+    "locations": [ "Z1011.l4" ]
   },
   {
-    "x": ,
-    "y": ,
-    "locations": [ "" ]
+    "x": 47,
+    "y": 57,
+    "locations": [ "Z1015.l0" ]
   },
   {
-    "x": ,
-    "y": ,
-    "locations": [ "" ]
+    "x": 45,
+    "y": 58,
+    "locations": [ "Z1015.l1" ]
   },
   {
-    "x": ,
-    "y": ,
-    "locations": [ "" ]
+    "x": 51,
+    "y": 59,
+    "locations": [ "Z1017.w0" ]
   },
   {
-    "x": ,
-    "y": ,
-    "locations": [ "" ]
+    "x": 50,
+    "y": 58,
+    "locations": [ "Z1018.l3" ]
   },
   {
-    "x": ,
-    "y": ,
-    "locations": [ "" ]
+    "x": 47,
+    "y": 65,
+    "locations": [ "Z1019.c0" ]
   },
   {
-    "x": ,
-    "y": ,
-    "locations": [ "" ]
+    "x": 48,
+    "y": 63,
+    "locations": [ "Z1019.l9" ]
   },
   {
-    "x": ,
-    "y": ,
-    "locations": [ "" ]
+    "x": 55,
+    "y": 64,
+    "locations": [ "Z1023.c0" ]
   },
   {
-    "x": ,
-    "y": ,
-    "locations": [ "" ]
+    "x": 55,
+    "y": 66,
+    "locations": [ "Z1023.l8" ]
   },
   {
-    "x": ,
-    "y": ,
-    "locations": [ "" ]
+    "x": 57,
+    "y": 63,
+    "locations": [ "Z1045.l0" ]
   },
   {
-    "x": ,
-    "y": ,
-    "locations": [ "" ]
+    "x": 51,
+    "y": 56,
+    "locations": [ "Z1050.c0", "Z1050.l7" ]
   },
   {
-    "x": ,
-    "y": ,
-    "locations": [ "" ]
+    "x": 45,
+    "y": 53,
+    "locations": [ "Z1058.c0" ]
   },
   {
-    "x": ,
-    "y": ,
-    "locations": [ "" ]
+    "x": 53,
+    "y": 67,
+    "locations": [ "Z1063.w0" ]
   },
   {
-    "x": ,
-    "y": ,
-    "locations": [ "" ]
+    "x": 51,
+    "y": 48,
+    "locations": [ "SHOPITINERANT.o3" ]
   },
+// Basilica of Absent Faces
   {
-    "x": ,
-    "y": ,
-    "locations": [ "" ]
+    "x": 68,
+    "y": 59,
+    "locations": [ "Z1103.l1" ]
   },
   {
-    "x": ,
-    "y": ,
-    "locations": [ "" ]
+    "x": 87,
+    "y": 62,
+    "locations": [ "Z1107.l5" ]
   },
   {
-    "x": ,
-    "y": ,
-    "locations": [ "" ]
+    "x": 89,
+    "y": 64,
+    "locations": [ "Z1109.l0" ]
   },
   {
-    "x": ,
-    "y": ,
-    "locations": [ "" ]
+    "x": 88,
+    "y": 70,
+    "locations": [ "Z1113.r8", "Z1113.i8", "Z1114.c0" ]
   },
+// Sunken Cathedral
   {
-    "x": ,
-    "y": ,
-    "locations": [ "" ]
+    "x": 31,
+    "y": 35,
+    "locations": [ "Z1202.c0" ]
   },
   {
-    "x": ,
-    "y": ,
-    "locations": [ "" ]
+    "x": 33,
+    "y": 35,
+    "locations": [ "Z1203.i2" ]
   },
   {
-    "x": ,
-    "y": ,
-    "locations": [ "" ]
+    "x": 33,
+    "y": 37,
+    "locations": [ "Z1205.w0" ]
   },
   {
-    "x": ,
-    "y": ,
-    "locations": [ "" ]
+    "x": 27,
+    "y": 33,
+    "locations": [ "Z1209.l1" ]
   },
   {
-    "x": ,
-    "y": ,
-    "locations": [ "" ]
+    "x": 27,
+    "y": 35,
+    "locations": [ "Z1209.l2" ]
   },
   {
-    "x": ,
-    "y": ,
-    "locations": [ "" ]
+    "x": 26,
+    "y": 38,
+    "locations": [ "Z1210.l2" ]
   },
   {
-    "x": ,
-    "y": ,
-    "locations": [ "" ]
+    "x": 29,
+    "y": 33,
+    "locations": [ "Z1216.r9", "Z1216.i9" ]
   },
   {
-    "x": ,
-    "y": ,
-    "locations": [ "" ]
+    "x": 33,
+    "y": 33,
+    "locations": [ "SHOPITINERANT.o5" ]
   },
+// Two Moons
   {
-    "x": ,
-    "y": ,
-    "locations": [ "" ]
+    "x": 62,
+    "y": 64,
+    "locations": [ "Z1303.c0" ]
   },
   {
-    "x": ,
-    "y": ,
-    "locations": [ "" ]
+    "x": 62,
+    "y": 62,
+    "locations": [ "Z1304.c0" ]
   },
   {
-    "x": ,
-    "y": ,
-    "locations": [ "" ]
+    "x": 66,
+    "y": 64,
+    "locations": [ "Z1307.l7" ]
   },
   {
-    "x": ,
-    "y": ,
-    "locations": [ "" ]
+    "x": 66,
+    "y": 61,
+    "locations": [ "Z1308.l7" ]
   },
   {
-    "x": ,
-    "y": ,
-    "locations": [ "" ]
+    "x": 68,
+    "y": 62,
+    "locations": [ "Z1310.l0" ]
   },
   {
-    "x": ,
-    "y": ,
-    "locations": [ "" ]
+    "x": 68,
+    "y": 64,
+    "locations": [ "Z1311.l7" ]
   },
   {
-    "x": ,
-    "y": ,
-    "locations": [ "" ]
+    "x": 68,
+    "y": 60,
+    "locations": [ "Z1312.l4" ]
   },
   {
-    "x": ,
-    "y": ,
-    "locations": [ "" ]
+    "x": 65,
+    "y": 59,
+    "locations": [ "Z1314.l6" ]
   },
   {
-    "x": ,
-    "y": ,
-    "locations": [ "" ]
+    "x": 62,
+    "y": 58,
+    "locations": [ "Z1326.i0" ]
   },
   {
-    "x": ,
-    "y": ,
-    "locations": [ "" ]
+    "x": 61,
+    "y": 66,
+    "locations": [ "Z1327.r7", "Z1327.i7", "Z1327.l3" ]
   },
   {
-    "x": ,
-    "y": ,
-    "locations": [ "" ]
+    "x": 60,
+    "y": 64,
+    "locations": [ "Z1329.l0" ]
   },
   {
-    "x": ,
-    "y": ,
-    "locations": [ "" ]
+    "x": 60,
+    "y": 61,
+    "locations": [ "Z1330.l5" ]
   },
-  {
-    "x": ,
-    "y": ,
-    "locations": [ "" ]
-  },
-  {
-    "x": ,
-    "y": ,
-    "locations": [ "" ]
-  },
-  {
-    "x": ,
-    "y": ,
-    "locations": [ "" ]
-  },
-  {
-    "x": ,
-    "y": ,
-    "locations": [ "" ]
-  },
-  {
-    "x": ,
-    "y": ,
-    "locations": [ "" ]
-  },
-  {
-    "x": ,
-    "y": ,
-    "locations": [ "" ]
-  },
-  {
-    "x": ,
-    "y": ,
-    "locations": [ "" ]
-  },
-  {
-    "x": ,
-    "y": ,
-    "locations": [ "" ]
-  },
-  {
-    "x": ,
-    "y": ,
-    "locations": [ "" ]
-  },
-  {
-    "x": ,
-    "y": ,
-    "locations": [ "" ]
-  },
-  {
-    "x": ,
-    "y": ,
-    "locations": [ "" ]
-  },
-  {
-    "x": ,
-    "y": ,
-    "locations": [ "" ]
-  },
-  {
-    "x": ,
-    "y": ,
-    "locations": [ "" ]
-  },
-  {
-    "x": ,
-    "y": ,
-    "locations": [ "" ]
-  },
-  {
-    "x": ,
-    "y": ,
-    "locations": [ "" ]
-  },
-  {
-    "x": ,
-    "y": ,
-    "locations": [ "" ]
-  },
-  {
-    "x": ,
-    "y": ,
-    "locations": [ "" ]
-  },
-  {
-    "x": ,
-    "y": ,
-    "locations": [ "" ]
-  },
-  {
-    "x": ,
-    "y": ,
-    "locations": [ "" ]
-  },
-  {
-    "x": ,
-    "y": ,
-    "locations": [ "" ]
-  },
-  {
-    "x": ,
-    "y": ,
-    "locations": [ "" ]
-  },
-  {
-    "x": ,
-    "y": ,
-    "locations": [ "" ]
-  },
-  {
-    "x": ,
-    "y": ,
-    "locations": [ "" ]
-  },
-  {
-    "x": ,
-    "y": ,
-    "locations": [ "" ]
-  },
-  {
-    "x": ,
-    "y": ,
-    "locations": [ "" ]
-  },
-  {
-    "x": ,
-    "y": ,
-    "locations": [ "" ]
-  },
-  {
-    "x": ,
-    "y": ,
-    "locations": [ "" ]
-  },
-  {
-    "x": ,
-    "y": ,
-    "locations": [ "" ]
-  },
-  {
-    "x": ,
-    "y": ,
-    "locations": [ "" ]
-  },
-  {
-    "x": ,
-    "y": ,
-    "locations": [ "" ]
-  },
-  {
-    "x": ,
-    "y": ,
-    "locations": [ "" ]
-  },
-  {
-    "x": ,
-    "y": ,
-    "locations": [ "" ]
-  },
-  {
-    "x": ,
-    "y": ,
-    "locations": [ "" ]
-  },
-  {
-    "x": ,
-    "y": ,
-    "locations": [ "" ]
-  },
-  {
-    "x": ,
-    "y": ,
-    "locations": [ "" ]
-  },
-  {
-    "x": ,
-    "y": ,
-    "locations": [ "" ]
-  },
-  {
-    "x": ,
-    "y": ,
-    "locations": [ "" ]
-  },
-  {
-    "x": ,
-    "y": ,
-    "locations": [ "" ]
-  },
-  {
-    "x": ,
-    "y": ,
-    "locations": [ "" ]
-  },
-  {
-    "x": ,
-    "y": ,
-    "locations": [ "" ]
-  },
-  {
-    "x": ,
-    "y": ,
-    "locations": [ "" ]
-  },
-  {
-    "x": ,
-    "y": ,
-    "locations": [ "" ]
-  },
-  {
-    "x": ,
-    "y": ,
-    "locations": [ "" ]
-  },
-  {
-    "x": ,
-    "y": ,
-    "locations": [ "" ]
-  },
-  {
-    "x": ,
-    "y": ,
-    "locations": [ "" ]
-  },
-  {
-    "x": ,
-    "y": ,
-    "locations": [ "" ]
-  },
-  {
-    "x": ,
-    "y": ,
-    "locations": [ "" ]
-  },
-  {
-    "x": ,
-    "y": ,
-    "locations": [ "" ]
-  },
-  
-  
-  
 // Mother of Mothers
   {
     "x": 57,
@@ -1313,19 +1073,19 @@
     "locations": [ "Z2401.i0" ]
   },
   {
-    "x": ,
-    "y": ,
-    "locations": [ "" ]
+    "x": 43,
+    "y": 55,
+    "locations": [ "Z2401.l3" ]
   },
   {
-    "x": ,
-    "y": ,
-    "locations": [ "" ]
+    "x": 43,
+    "y": 56,
+    "locations": [ "Z2401.l4" ]
   },
   {
-    "x": ,
-    "y": ,
-    "locations": [ "" ]
+    "x": 43,
+    "y": 60,
+    "locations": [ "Z2401.l2" ]
   },
   {
     "x": 43,
@@ -1343,15 +1103,4 @@
     "y": 40,
     "locations": [ "SHOPMISSABLES.o0", "SHOPMISSABLES.o1", "SHOPMISSABLES.o2", "SHOPMISSABLES.o3", "SHOPMISSABLES.o4", "SHOPMISSABLES.o5", "SHOPMISSABLES.o6" ]
   }
-
-  {
-    "x": 51,
-    "y": 48,
-    "locations": [ "SHOPITINERANT.o3" ]
-  },
-  {
-    "x": 33,
-    "y": 33,
-    "locations": [ "SHOPITINERANT.o5" ]
-  },
 ]
