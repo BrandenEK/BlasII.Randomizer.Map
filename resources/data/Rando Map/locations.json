@@ -1,4 +1,5 @@
 [
+// Repose of the Silent One
   {
     "x": 28,
     "y": 43,
@@ -14,7 +15,12 @@
     "y": 43,
     "locations": [ "Z0108.l2" ]
   },
-  
+  {
+    "x": 22,
+    "y": 43,
+    "locations": [ "SHOPITINERANT.o6" ]
+  },
+// Ravine of the High Stones
   {
     "x": 38,
     "y": 44,
@@ -50,7 +56,7 @@
     "y": 43,
     "locations": [ "Z0204.l4" ]
   },
-  
+// Aquaduct of the Costales
   {
     "x": 43,
     "y": 49,
@@ -126,7 +132,7 @@
     "y": 47,
     "locations": [ "Z0313.l9" ]
   },
-  
+// Sacred Entombments
   {
     "x": 30,
     "y": 57,
@@ -202,7 +208,7 @@
     "y": 55,
     "locations": [ "Z0423.l1" ]
   },
-  
+// City of the Blessed Name
   {
     "x": 47,
     "y": 45,
@@ -224,14 +230,14 @@
     "locations": [ "Z0502.c0" ]
   },
   {
-    "x": 50,
-    "y": 44,
-    "locations": [ "Z05BZ01.l0", "Z05BZ01.l16", "Z05BZ01.i0" ]
-  },
-  {
     "x": 51,
     "y": 44,
     "locations": [ "Z0502.i1" ]
+  },
+  {
+    "x": 50,
+    "y": 44,
+    "locations": [ "Z05BZ01.l0", "Z05BZ01.l16", "Z05BZ01.i0" ]
   },
   {
     "x": 54,
@@ -242,6 +248,11 @@
     "x": 55,
     "y": 46,
     "locations": [ "Z0503.l4" ]
+  },
+  {
+    "x": 53,
+    "y": 45,
+    "locations": [ "Z05BZ06.l0" ]
   },
   {
     "x": 52,
@@ -255,10 +266,15 @@
   },
   {
     "x": 53,
-    "y": 45,
-    "locations": [ "Z05BZ06.l0" ]
+    "y": 44,
+    "locations": [ "Z0503.i9", "SHOPHAND.o0", "SHOPHAND.o1", "SHOPHAND.o2", "SHOPHAND.o3", "SHOPHAND.o4", "SHOPHAND.o5", "SHOPHAND.o6", "SHOPHAND.o7", "SHOPHAND.o8", "SHOPHAND.o9", "SHOPHAND.o10", "SHOPHAND.o11" ]
   },
-  
+  {
+    "x": 54,
+    "y": 44,
+    "locations": [ "SHOPITINERANT.o0", "SHOPITINERANT.o1" ]
+  },
+// Grilles and Ruin
   {
     "x": 61,
     "y": 45,
@@ -309,7 +325,7 @@
     "y": 47,
     "locations": [ "Z0615.r2" ]
   },
-  
+// Palace of the Embroideries
   {
     "x": 84,
     "y": 41,
@@ -365,152 +381,583 @@
     "y": 40,
     "locations": [ "Z0730.l2" ]
   },
-  
+// Choir of Thorns
   {
-    "x": ,
-    "y": ,
-    "locations": [ "" ]
+    "x": 73,
+    "y": 53,
+    "locations": [ "Z0805.l0" ]
   },
   {
-    "x": ,
-    "y": ,
-    "locations": [ "" ]
+    "x": 75,
+    "y": 52,
+    "locations": [ "Z0806.c0" ]
   },
   {
-    "x": ,
-    "y": ,
-    "locations": [ "" ]
+    "x": 84,
+    "y": 47,
+    "locations": [ "Z0809.c0" ]
   },
   {
-    "x": ,
-    "y": ,
-    "locations": [ "" ]
+    "x": 65,
+    "y": 51,
+    "locations": [ "Z0810.l0" ]
   },
   {
-    "x": ,
-    "y": ,
-    "locations": [ "" ]
+    "x": 70,
+    "y": 49,
+    "locations": [ "Z0811.w0" ]
   },
   {
-    "x": ,
-    "y": ,
-    "locations": [ "" ]
+    "x": 73,
+    "y": 49,
+    "locations": [ "Z0814.l6" ]
   },
   {
-    "x": ,
-    "y": ,
-    "locations": [ "" ]
+    "x": 81,
+    "y": 47,
+    "locations": [ "Z0815.i0" ]
   },
   {
-    "x": ,
-    "y": ,
-    "locations": [ "" ]
+    "x": 68,
+    "y": 54,
+    "locations": [ "Z0817.l0" ]
+  },
+// Crown of Towers
+  {
+    "x": 80,
+    "y": 55,
+    "locations": [ "Z0901.l1" ]
   },
   {
-    "x": ,
-    "y": ,
-    "locations": [ "" ]
+    "x": 80,
+    "y": 54,
+    "locations": [ "Z0901.l3" ]
   },
   {
-    "x": ,
-    "y": ,
-    "locations": [ "" ]
+    "x": 83,
+    "y": 54,
+    "locations": [ "Z0903.l2" ]
   },
   {
-    "x": ,
-    "y": ,
-    "locations": [ "" ]
+    "x": 89,
+    "y": 53,
+    "locations": [ "Z0905.l2" ]
   },
   {
-    "x": ,
-    "y": ,
-    "locations": [ "" ]
+    "x": 83,
+    "y": 56,
+    "locations": [ "Z0908.l9" ]
   },
   {
-    "x": ,
-    "y": ,
-    "locations": [ "" ]
+    "x": 92,
+    "y": 55,
+    "locations": [ "Z0909.l5" ]
   },
   {
-    "x": ,
-    "y": ,
-    "locations": [ "" ]
+    "x": 95,
+    "y": 54,
+    "locations": [ "Z0912.l8" ]
   },
   {
-    "x": ,
-    "y": ,
-    "locations": [ "" ]
+    "x": 94,
+    "y": 52,
+    "locations": [ "Z0913.l1" ]
   },
   {
-    "x": ,
-    "y": ,
-    "locations": [ "" ]
+    "x": 95,
+    "y": 59,
+    "locations": [ "Z0915.l9" ]
   },
   {
-    "x": ,
-    "y": ,
-    "locations": [ "" ]
+    "x": 84,
+    "y": 60,
+    "locations": [ "Z0921.r14" ]
   },
   {
-    "x": ,
-    "y": ,
-    "locations": [ "" ]
+    "x": 90,
+    "y": 52,
+    "locations": [ "Z0923.c0" ]
   },
   {
-    "x": ,
-    "y": ,
-    "locations": [ "" ]
+    "x": 89,
+    "y": 56,
+    "locations": [ "Z0926.a0" ]
   },
   {
-    "x": ,
-    "y": ,
-    "locations": [ "" ]
+    "x": 88,
+    "y": 56,
+    "locations": [ "Z0927.l4" ]
   },
   {
-    "x": ,
-    "y": ,
-    "locations": [ "" ]
+    "x": 92,
+    "y": 60,
+    "locations": [ "Z0928.c0" ]
   },
   {
-    "x": ,
-    "y": ,
-    "locations": [ "" ]
+    "x": 95,
+    "y": 60,
+    "locations": [ "Z0929.w0" ]
   },
   {
-    "x": ,
-    "y": ,
-    "locations": [ "" ]
+    "x": 90,
+    "y": 55,
+    "locations": [ "SHOPITINERANT.o2" ]
   },
-  {
-    "x": ,
-    "y": ,
-    "locations": [ "" ]
-  },
-  {
-    "x": ,
-    "y": ,
-    "locations": [ "" ]
-  },
-  {
-    "x": ,
-    "y": ,
-    "locations": [ "" ]
-  },
-  {
-    "x": ,
-    "y": ,
-    "locations": [ "" ]
-  },
-  {
-    "x": ,
-    "y": ,
-    "locations": [ "" ]
+{
+    "x": 85,
+    "y": 58,
+    "locations": [ "SHOPITINERANT.o4" ]
   },
   
+  {
+    "x": ,
+    "y": ,
+    "locations": [ "" ]
+  },
+  {
+    "x": ,
+    "y": ,
+    "locations": [ "" ]
+  },
+  {
+    "x": ,
+    "y": ,
+    "locations": [ "" ]
+  },
+  {
+    "x": ,
+    "y": ,
+    "locations": [ "" ]
+  },
+  {
+    "x": ,
+    "y": ,
+    "locations": [ "" ]
+  },
+  {
+    "x": ,
+    "y": ,
+    "locations": [ "" ]
+  },
+  {
+    "x": ,
+    "y": ,
+    "locations": [ "" ]
+  },
+  {
+    "x": ,
+    "y": ,
+    "locations": [ "" ]
+  },
+  {
+    "x": ,
+    "y": ,
+    "locations": [ "" ]
+  },
+  {
+    "x": ,
+    "y": ,
+    "locations": [ "" ]
+  },
+  {
+    "x": ,
+    "y": ,
+    "locations": [ "" ]
+  },
+  {
+    "x": ,
+    "y": ,
+    "locations": [ "" ]
+  },
+  {
+    "x": ,
+    "y": ,
+    "locations": [ "" ]
+  },
+  {
+    "x": ,
+    "y": ,
+    "locations": [ "" ]
+  },
+  {
+    "x": ,
+    "y": ,
+    "locations": [ "" ]
+  },
+  {
+    "x": ,
+    "y": ,
+    "locations": [ "" ]
+  },
+  {
+    "x": ,
+    "y": ,
+    "locations": [ "" ]
+  },
+  {
+    "x": ,
+    "y": ,
+    "locations": [ "" ]
+  },
+  {
+    "x": ,
+    "y": ,
+    "locations": [ "" ]
+  },
+  {
+    "x": ,
+    "y": ,
+    "locations": [ "" ]
+  },
+  {
+    "x": ,
+    "y": ,
+    "locations": [ "" ]
+  },
+  {
+    "x": ,
+    "y": ,
+    "locations": [ "" ]
+  },
+  {
+    "x": ,
+    "y": ,
+    "locations": [ "" ]
+  },
+  {
+    "x": ,
+    "y": ,
+    "locations": [ "" ]
+  },
+  {
+    "x": ,
+    "y": ,
+    "locations": [ "" ]
+  },
+  {
+    "x": ,
+    "y": ,
+    "locations": [ "" ]
+  },
+  {
+    "x": ,
+    "y": ,
+    "locations": [ "" ]
+  },
+  {
+    "x": ,
+    "y": ,
+    "locations": [ "" ]
+  },
+  {
+    "x": ,
+    "y": ,
+    "locations": [ "" ]
+  },
+  {
+    "x": ,
+    "y": ,
+    "locations": [ "" ]
+  },
+  {
+    "x": ,
+    "y": ,
+    "locations": [ "" ]
+  },
+  {
+    "x": ,
+    "y": ,
+    "locations": [ "" ]
+  },
+  {
+    "x": ,
+    "y": ,
+    "locations": [ "" ]
+  },
+  {
+    "x": ,
+    "y": ,
+    "locations": [ "" ]
+  },
+  {
+    "x": ,
+    "y": ,
+    "locations": [ "" ]
+  },
+  {
+    "x": ,
+    "y": ,
+    "locations": [ "" ]
+  },
+  {
+    "x": ,
+    "y": ,
+    "locations": [ "" ]
+  },
+  {
+    "x": ,
+    "y": ,
+    "locations": [ "" ]
+  },
+  {
+    "x": ,
+    "y": ,
+    "locations": [ "" ]
+  },
+  {
+    "x": ,
+    "y": ,
+    "locations": [ "" ]
+  },
+  {
+    "x": ,
+    "y": ,
+    "locations": [ "" ]
+  },
+  {
+    "x": ,
+    "y": ,
+    "locations": [ "" ]
+  },
+  {
+    "x": ,
+    "y": ,
+    "locations": [ "" ]
+  },
+  {
+    "x": ,
+    "y": ,
+    "locations": [ "" ]
+  },
+  {
+    "x": ,
+    "y": ,
+    "locations": [ "" ]
+  },
+  {
+    "x": ,
+    "y": ,
+    "locations": [ "" ]
+  },
+  {
+    "x": ,
+    "y": ,
+    "locations": [ "" ]
+  },
+  {
+    "x": ,
+    "y": ,
+    "locations": [ "" ]
+  },
+  {
+    "x": ,
+    "y": ,
+    "locations": [ "" ]
+  },
+  {
+    "x": ,
+    "y": ,
+    "locations": [ "" ]
+  },
+  {
+    "x": ,
+    "y": ,
+    "locations": [ "" ]
+  },
+  {
+    "x": ,
+    "y": ,
+    "locations": [ "" ]
+  },
+  {
+    "x": ,
+    "y": ,
+    "locations": [ "" ]
+  },
+  {
+    "x": ,
+    "y": ,
+    "locations": [ "" ]
+  },
+  {
+    "x": ,
+    "y": ,
+    "locations": [ "" ]
+  },
+  {
+    "x": ,
+    "y": ,
+    "locations": [ "" ]
+  },
+  {
+    "x": ,
+    "y": ,
+    "locations": [ "" ]
+  },
+  {
+    "x": ,
+    "y": ,
+    "locations": [ "" ]
+  },
+  {
+    "x": ,
+    "y": ,
+    "locations": [ "" ]
+  },
+  {
+    "x": ,
+    "y": ,
+    "locations": [ "" ]
+  },
+  {
+    "x": ,
+    "y": ,
+    "locations": [ "" ]
+  },
+  {
+    "x": ,
+    "y": ,
+    "locations": [ "" ]
+  },
+  {
+    "x": ,
+    "y": ,
+    "locations": [ "" ]
+  },
+  {
+    "x": ,
+    "y": ,
+    "locations": [ "" ]
+  },
+  {
+    "x": ,
+    "y": ,
+    "locations": [ "" ]
+  },
+  {
+    "x": ,
+    "y": ,
+    "locations": [ "" ]
+  },
+  {
+    "x": ,
+    "y": ,
+    "locations": [ "" ]
+  },
+  {
+    "x": ,
+    "y": ,
+    "locations": [ "" ]
+  },
+  {
+    "x": ,
+    "y": ,
+    "locations": [ "" ]
+  },
+  {
+    "x": ,
+    "y": ,
+    "locations": [ "" ]
+  },
+  {
+    "x": ,
+    "y": ,
+    "locations": [ "" ]
+  },
+  {
+    "x": ,
+    "y": ,
+    "locations": [ "" ]
+  },
+  {
+    "x": ,
+    "y": ,
+    "locations": [ "" ]
+  },
+  {
+    "x": ,
+    "y": ,
+    "locations": [ "" ]
+  },
+  {
+    "x": ,
+    "y": ,
+    "locations": [ "" ]
+  },
+  {
+    "x": ,
+    "y": ,
+    "locations": [ "" ]
+  },
+  {
+    "x": ,
+    "y": ,
+    "locations": [ "" ]
+  },
+  {
+    "x": ,
+    "y": ,
+    "locations": [ "" ]
+  },
+  {
+    "x": ,
+    "y": ,
+    "locations": [ "" ]
+  },
+  {
+    "x": ,
+    "y": ,
+    "locations": [ "" ]
+  },
+  {
+    "x": ,
+    "y": ,
+    "locations": [ "" ]
+  },
+  {
+    "x": ,
+    "y": ,
+    "locations": [ "" ]
+  },
+  {
+    "x": ,
+    "y": ,
+    "locations": [ "" ]
+  },
+  {
+    "x": ,
+    "y": ,
+    "locations": [ "" ]
+  },
+  {
+    "x": ,
+    "y": ,
+    "locations": [ "" ]
+  },
+  {
+    "x": ,
+    "y": ,
+    "locations": [ "" ]
+  },
+  {
+    "x": ,
+    "y": ,
+    "locations": [ "" ]
+  },
+  {
+    "x": ,
+    "y": ,
+    "locations": [ "" ]
+  },
+  {
+    "x": ,
+    "y": ,
+    "locations": [ "" ]
+  },
   
   
   
-  
+// Mother of Mothers
   {
     "x": 57,
     "y": 32,
@@ -571,13 +1018,13 @@
     "y": 31,
     "locations": [ "Z1427.l0" ]
   },
-  
+// Dreams of Incense
   {
     "x": 67,
     "y": 37,
     "locations": [ "Z1501.s0", "Z1501.s1", "Z1501.s2", "Z1501.s3", "Z1501.s4" ]
   },
-  
+// The Severed Tower
   {
     "x": 19,
     "y": 35,
@@ -633,7 +1080,7 @@
     "y": 42,
     "locations": [ "Z1625.i2" ]
   },
-  
+// Streets of Wakes
   {
     "x": 58,
     "y": 38,
@@ -659,7 +1106,7 @@
     "y": 41,
     "locations": [ "Z1719.l3" ]
   },
-  
+// Crimson Rains
   {
     "x": 52,
     "y": 70,
@@ -685,7 +1132,12 @@
     "y": 84,
     "locations": [ "Z1808.r6", "Z1808.i6" ]
   },
-  
+  {
+    "x": 50,
+    "y": 66,
+    "locations": [ "SHOPITINERANT.o7" ]
+  },
+// Profundo Lamento
   {
     "x": 51,
     "y": 41,
@@ -756,7 +1208,7 @@
     "y": 35,
     "locations": [ "Z1919.l3" ]
   },
-  
+// Sea of Ink
   {
     "x": 45,
     "y": 33,
@@ -767,7 +1219,7 @@
     "y": 33,
     "locations": [ "Z2004.c0" ]
   },
-  
+// Labyrinth of Tides
   {
     "x": 28,
     "y": 30,
@@ -828,7 +1280,7 @@
     "y": 32,
     "locations": [ "Z2123.l2" ]
   },
-  
+// Beneath Her Sacred Grounds
   {
     "x": 51,
     "y": 22,
@@ -854,7 +1306,7 @@
     "y": 23,
     "locations": [ "Z2310.w0" ]
   },
-  
+// Garden of the High Choirs
   {
     "x": 43,
     "y": 53,
@@ -885,50 +1337,21 @@
     "y": 64,
     "locations": [ "Z2402.l2" ]
   },
+// Forlorn Patio
+  {
+    "x": 56,
+    "y": 40,
+    "locations": [ "SHOPMISSABLES.o0", "SHOPMISSABLES.o1", "SHOPMISSABLES.o2", "SHOPMISSABLES.o3", "SHOPMISSABLES.o4", "SHOPMISSABLES.o5", "SHOPMISSABLES.o6" ]
+  }
 
-  {
-    "x": 53,
-    "y": 44,
-    "locations": [ "SHOPHAND.o0", "SHOPHAND.o1", "SHOPHAND.o2", "SHOPHAND.o3", "SHOPHAND.o4", "SHOPHAND.o5", "SHOPHAND.o6", "SHOPHAND.o7", "SHOPHAND.o8", "SHOPHAND.o9", "SHOPHAND.o10", "SHOPHAND.o11", "Z0503.i9" ]
-  },
-  {
-    "x": 54,
-    "y": 44,
-    "locations": [ "SHOPITINERANT.o0", "SHOPITINERANT.o1" ]
-  },
-  {
-    "x": 90,
-    "y": 55,
-    "locations": [ "SHOPITINERANT.o2" ]
-  },
   {
     "x": 51,
     "y": 48,
     "locations": [ "SHOPITINERANT.o3" ]
   },
   {
-    "x": 85,
-    "y": 58,
-    "locations": [ "SHOPITINERANT.o4" ]
-  },
-  {
     "x": 33,
     "y": 33,
     "locations": [ "SHOPITINERANT.o5" ]
   },
-  {
-    "x": 22,
-    "y": 43,
-    "locations": [ "SHOPITINERANT.o6" ]
-  },
-  {
-    "x": 50,
-    "y": 66,
-    "locations": [ "SHOPITINERANT.o7" ]
-  },
-  {
-    "x": 56,
-    "y": 40,
-    "locations": [ "SHOPMISSABLES.o0", "SHOPMISSABLES.o1", "SHOPMISSABLES.o2", "SHOPMISSABLES.o3", "SHOPMISSABLES.o4", "SHOPMISSABLES.o5", "SHOPMISSABLES.o6" ]
-  }
 ]
