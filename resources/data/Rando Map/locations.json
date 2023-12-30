@@ -14,6 +14,7 @@
     "y": 43,
     "locations": [ "Z0108.l2" ]
   },
+  
   {
     "x": 38,
     "y": 44,
@@ -48,5 +49,433 @@
     "x": 43,
     "y": 43,
     "locations": [ "Z0204.l4" ]
+  },
+  
+  {
+    "x": ,
+    "y": ,
+    "locations": [ "" ]
+  },
+  
+  
+  {
+    "x": 57,
+    "y": 32,
+    "locations": [ "Z1404.c0" ]
+  },
+  {
+    "x": 56,
+    "y": 32,
+    "locations": [ "Z1404.l8" ]
+  },
+  {
+    "x": 56,
+    "y": 29,
+    "locations": [ "Z1404.l15" ]
+  },
+  {
+    "x": 52,
+    "y": 30,
+    "locations": [ "Z1405.l3" ]
+  },
+  {
+    "x": 50,
+    "y": 30,
+    "locations": [ "Z1407.l1" ]
+  },
+  {
+    "x": 45,
+    "y": 30,
+    "locations": [ "Z1408.c0" ]
+  },
+  {
+    "x": 50,
+    "y": 33,
+    "locations": [ "Z1418.l5" ]
+  },
+  {
+    "x": 48,
+    "y": 34,
+    "locations": [ "Z1419.l2" ]
+  },
+  {
+    "x": 50,
+    "y": 34,
+    "locations": [ "Z1421.l1" ]
+  },
+  {
+    "x": 49,
+    "y": 28,
+    "locations": [ "Z1422.l8" ]
+  },
+  {
+    "x": 59,
+    "y": 29,
+    "locations": [ "Z1424.l3" ]
+  },
+  {
+    "x": 55,
+    "y": 31,
+    "locations": [ "Z1427.l0" ]
+  },
+  
+  {
+    "x": 67,
+    "y": 37,
+    "locations": [ "Z1501.s0", "Z1501.s1", "Z1501.s2", "Z1501.s3", "Z1501.s4" ]
+  },
+  
+  {
+    "x": 19,
+    "y": 35,
+    "locations": [ "Z1602.l2" ]
+  },
+  {
+    "x": 20,
+    "y": 36,
+    "locations": [ "Z1603.i2" ]
+  },
+  {
+    "x": 19,
+    "y": 38,
+    "locations": [ "Z1605.c0", "Z1605.l5" ]
+  },
+  {
+    "x": 18,
+    "y": 42,
+    "locations": [ "Z1610.l4" ]
+  },
+  {
+    "x": 18,
+    "y": 47,
+    "locations": [ "Z1615.a0" ]
+  },
+  {
+    "x": 18,
+    "y": 48,
+    "locations": [ "Z1616.i1" ]
+  },
+  {
+    "x": 18,
+    "y": 51,
+    "locations": [ "Z1619.l6" ]
+  },
+  {
+    "x": 18,
+    "y": 52,
+    "locations": [ "Z1621.l1" ]
+  },
+  {
+    "x": 20,
+    "y": 43,
+    "locations": [ "Z1622.r6", "Z1622.i6" ]
+  },
+  {
+    "x": 22,
+    "y": 37,
+    "locations": [ "Z1623.c0" ]
+  },
+  {
+    "x": 20,
+    "y": 42,
+    "locations": [ "Z1625.i2" ]
+  },
+  
+  {
+    "x": 58,
+    "y": 38,
+    "locations": [ "Z1701.c0" ]
+  },
+  {
+    "x": 63,
+    "y": 37,
+    "locations": [ "Z1709.l0" ]
+  },
+  {
+    "x": 65,
+    "y": 41,
+    "locations": [ "Z1715.l0" ]
+  },
+  {
+    "x": 62,
+    "y": 40,
+    "locations": [ "Z1718.l0" ]
+  },
+  {
+    "x": 60,
+    "y": 41,
+    "locations": [ "Z1719.l3" ]
+  },
+  
+  {
+    "x": 52,
+    "y": 70,
+    "locations": [ "Z1801.l1" ]
+  },
+  {
+    "x": 49,
+    "y": 74,
+    "locations": [ "Z1802.l10" ]
+  },
+  {
+    "x": 53,
+    "y": 75,
+    "locations": [ "Z1803.l7" ]
+  },
+  {
+    "x": 50,
+    "y": 82,
+    "locations": [ "Z1804.l2" ]
+  },
+  {
+    "x": 53,
+    "y": 84,
+    "locations": [ "Z1808.r6", "Z1808.i6" ]
+  },
+  
+  {
+    "x": 51,
+    "y": 41,
+    "locations": [ "Z1901.l0" ]
+  },
+  {
+    "x": 51,
+    "y": 39,
+    "locations": [ "Z1903.l0" ]
+  },
+  {
+    "x": 54,
+    "y": 37,
+    "locations": [ "Z1905.c0" ]
+  },
+  {
+    "x": 51,
+    "y": 36,
+    "locations": [ "Z1906.i1" ]
+  },
+  {
+    "x": 54,
+    "y": 36,
+    "locations": [ "Z1907.i0" ]
+  },
+  {
+    "x": 57,
+    "y": 38,
+    "locations": [ "Z1909.l0" ]
+  },
+  {
+    "x": 55,
+    "y": 38,
+    "locations": [ "Z1910.l0" ]
+  },
+  {
+    "x": 56,
+    "y": 38,
+    "locations": [ "Z1910.l4" ]
+  },
+  {
+    "x": 47,
+    "y": 43,
+    "locations": [ "Z1913.l1" ]
+  },
+  {
+    "x": 48,
+    "y": 43,
+    "locations": [ "Z1914.i2" ]
+  },
+  {
+    "x": 45,
+    "y": 42,
+    "locations": [ "Z1917.i0", "Z1917.l3" ]
+  },
+  {
+    "x": 55,
+    "y": 36,
+    "locations": [ "Z1918.l2" ]
+  },
+  {
+    "x": 55,
+    "y": 35,
+    "locations": [ "Z1919.a0" ]
+  },
+  {
+    "x": 54,
+    "y": 35,
+    "locations": [ "Z1919.l3" ]
+  },
+  
+  {
+    "x": 45,
+    "y": 33,
+    "locations": [ "Z2001.l1" ]
+  },
+  {
+    "x": 34,
+    "y": 33,
+    "locations": [ "Z2004.c0" ]
+  },
+  
+  {
+    "x": 28,
+    "y": 30,
+    "locations": [ "Z2102.l0" ]
+  },
+  {
+    "x": 27,
+    "y": 29,
+    "locations": [ "Z2103.l0" ]
+  },
+  {
+    "x": 25,
+    "y": 28,
+    "locations": [ "Z2104.l7" ]
+  },
+  {
+    "x": 22,
+    "y": 29,
+    "locations": [ "Z2106.l4" ]
+  },
+  {
+    "x": 13,
+    "y": 31,
+    "locations": [ "Z2112.l0" ]
+  },
+  {
+    "x": 17,
+    "y": 33,
+    "locations": [ "Z2115.c0" ]
+  },
+  {
+    "x": 15,
+    "y": 33,
+    "locations": [ "Z2116.l2" ]
+  },
+  {
+    "x": 17,
+    "y": 28,
+    "locations": [ "Z2117.c0" ]
+  },
+  {
+    "x": 16,
+    "y": 27,
+    "locations": [ "Z2117.l1" ]
+  },
+  {
+    "x": 19,
+    "y": 27,
+    "locations": [ "Z2119.i0" ]
+  },
+  {
+    "x": 20,
+    "y": 27,
+    "locations": [ "Z2120.i2" ]
+  },
+  {
+    "x": 24,
+    "y": 32,
+    "locations": [ "Z2123.l2" ]
+  },
+  
+  {
+    "x": 51,
+    "y": 22,
+    "locations": [ "Z2301.l16" ]
+  },
+  {
+    "x": 49,
+    "y": 20,
+    "locations": [ "Z2304.r15" ]
+  },
+  {
+    "x": 49,
+    "y": 23,
+    "locations": [ "Z2306.c0" ]
+  },
+  {
+    "x": 47,
+    "y": 18,
+    "locations": [ "Z2308.a0" ]
+  },
+  {
+    "x": 54,
+    "y": 23,
+    "locations": [ "Z2310.w0" ]
+  },
+  
+  {
+    "x": 43,
+    "y": 53,
+    "locations": [ "Z2401.i0" ]
+  },
+  {
+    "x": ,
+    "y": ,
+    "locations": [ "" ]
+  },
+  {
+    "x": ,
+    "y": ,
+    "locations": [ "" ]
+  },
+  {
+    "x": ,
+    "y": ,
+    "locations": [ "" ]
+  },
+  {
+    "x": 43,
+    "y": 63,
+    "locations": [ "Z2402.l0", "Z2402.l1" ]
+  },
+  {
+    "x": 43,
+    "y": 64,
+    "locations": [ "Z2402.l2" ]
+  },
+
+  {
+    "x": 53,
+    "y": 44,
+    "locations": [ "SHOPHAND.o0", "SHOPHAND.o1", "SHOPHAND.o2", "SHOPHAND.o3", "SHOPHAND.o4", "SHOPHAND.o5", "SHOPHAND.o6", "SHOPHAND.o7", "SHOPHAND.o8", "SHOPHAND.o9", "SHOPHAND.o10", "SHOPHAND.o11" ]
+  },
+  {
+    "x": 54,
+    "y": 44,
+    "locations": [ "SHOPITINERANT.o0", "SHOPITINERANT.o1" ]
+  },
+  {
+    "x": 90,
+    "y": 55,
+    "locations": [ "SHOPITINERANT.o2" ]
+  },
+  {
+    "x": 51,
+    "y": 48,
+    "locations": [ "SHOPITINERANT.o3" ]
+  },
+  {
+    "x": 85,
+    "y": 58,
+    "locations": [ "SHOPITINERANT.o4" ]
+  },
+  {
+    "x": 33,
+    "y": 33,
+    "locations": [ "SHOPITINERANT.o5" ]
+  },
+  {
+    "x": 22,
+    "y": 43,
+    "locations": [ "SHOPITINERANT.o6" ]
+  },
+  {
+    "x": 50,
+    "y": 66,
+    "locations": [ "SHOPITINERANT.o7" ]
+  },
+  {
+    "x": 56,
+    "y": 40,
+    "locations": [ "SHOPMISSABLES.o0", "SHOPMISSABLES.o1", "SHOPMISSABLES.o2", "SHOPMISSABLES.o3", "SHOPMISSABLES.o4", "SHOPMISSABLES.o5", "SHOPMISSABLES.o6" ]
   }
 ]
