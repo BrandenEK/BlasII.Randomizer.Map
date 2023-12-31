@@ -1,4 +1,5 @@
 ﻿using BlasII.ModdingAPI;
+using BlasII.ModdingAPI.Files;
 using BlasII.Randomizer.Map.Locations;
 using System.Collections.Generic;
 using UnityEngine;
@@ -13,14 +14,14 @@ namespace BlasII.Randomizer.Map
         private readonly Dictionary<Vector2Int, ILocation> _locationData = new();
         internal Dictionary<Vector2Int, ILocation> AllLocations => _locationData;
 
-        public bool IsMapOpen { get; private set; } = false;
+        public MapMode MapMode { get; private set; } = MapMode.Closed;
         public bool DisplayLocations { get; private set; } = true;
 
         public MapTracker() : base(ModInfo.MOD_ID, ModInfo.MOD_NAME, ModInfo.MOD_AUTHOR, ModInfo.MOD_VERSION) { }
 
         protected override void OnInitialize()
         {
-            if (FileHandler.LoadDataAsSprite("marker.png", out Sprite image, 10, true))
+            if (FileHandler.LoadDataAsSprite("marker.png", out Sprite image, new SpriteImportOptions() { PixelsPerUnit = 10 }))
             {
                 _ui.LoadImage(image);
             }
@@ -60,29 +61,38 @@ namespace BlasII.Randomizer.Map
 
         protected override void OnLateUpdate()
         {
-            if (!IsMapOpen) return;
+            if (MapMode == MapMode.Closed) return;
 
-            if (InputHandler.GetKeyDown("ToggleLocations"))
+            if (InputHandler.GetKeyDown("ToggleLocations") && MapMode == MapMode.OpenNormal)
             {
                 DisplayLocations = !DisplayLocations;
-                _ui.Refresh(_inventory.CurrentInventory, true);
+                _ui.Refresh(_inventory.CurrentInventory, true, true);
             }
 
             _ui.Update(_inventory.CurrentInventory);
         }
 
-        public void OnOpenMap()
+        public void OnOpenMap(bool isNormal)
         {
-            IsMapOpen = true;
-            _ui.Refresh(_inventory.CurrentInventory, true);
+            MapMode = isNormal ? MapMode.OpenNormal : MapMode.OpenTeleport;
+            _ui.Refresh(_inventory.CurrentInventory, isNormal, isNormal);
         }
 
         public void OnCloseMap()
         {
-            IsMapOpen = false;
+            MapMode = MapMode.Closed;
         }
 
-        public void OnZoomIn() => _ui.Refresh(_inventory.CurrentInventory, true);
-        public void OnZoomOut() => _ui.Refresh(_inventory.CurrentInventory, false);
+        public void OnZoomIn()
+        {
+            MapMode = MapMode.OpenNormal;
+            _ui.Refresh(_inventory.CurrentInventory, true, true);
+        }
+
+        public void OnZoomOut()
+        {
+            MapMode = MapMode.OpenZoomed;
+            _ui.Refresh(_inventory.CurrentInventory, true, false);
+        }
     }
 }

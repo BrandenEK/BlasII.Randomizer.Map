@@ -1,4 +1,5 @@
 [
+// Repose of the Silent One
   {
     "x": 28,
     "y": 43,
@@ -14,6 +15,12 @@
     "y": 43,
     "locations": [ "Z0108.l2" ]
   },
+  {
+    "x": 22,
+    "y": 43,
+    "locations": [ "SHOPITINERANT.o6" ]
+  },
+// Ravine of the High Stones
   {
     "x": 38,
     "y": 44,
@@ -48,5 +55,1052 @@
     "x": 43,
     "y": 43,
     "locations": [ "Z0204.l4" ]
+  },
+// Aquaduct of the Costales
+  {
+    "x": 43,
+    "y": 49,
+    "locations": [ "Z0301.l10" ]
+  },
+  {
+    "x": 41,
+    "y": 49,
+    "locations": [ "Z0301.l11" ]
+  },
+  {
+    "x": 42,
+    "y": 52,
+    "locations": [ "Z0302.c0" ]
+  },
+  {
+    "x": 39,
+    "y": 52,
+    "locations": [ "Z0303.l6" ]
+  },
+  {
+    "x": 35,
+    "y": 51,
+    "locations": [ "Z0304.l4" ]
+  },
+  {
+    "x": 37,
+    "y": 52,
+    "locations": [ "Z0304.l9" ]
+  },
+  {
+    "x": 38,
+    "y": 55,
+    "locations": [ "Z0305.l5" ]
+  },
+  {
+    "x": 40,
+    "y": 56,
+    "locations": [ "Z0305.l6" ]
+  },
+  {
+    "x": 37,
+    "y": 55,
+    "locations": [ "Z0306.l12" ]
+  },
+  {
+    "x": 36,
+    "y": 48,
+    "locations": [ "Z0307.l8" ]
+  },
+  {
+    "x": 39,
+    "y": 50,
+    "locations": [ "Z0308.c0" ]
+  },
+  {
+    "x": 38,
+    "y": 50,
+    "locations": [ "Z0308.l26" ]
+  },
+  {
+    "x": 40,
+    "y": 48,
+    "locations": [ "Z0308.l27" ]
+  },
+  {
+    "x": 45,
+    "y": 47,
+    "locations": [ "Z0312.c0" ]
+  },
+  {
+    "x": 39,
+    "y": 47,
+    "locations": [ "Z0313.l9" ]
+  },
+// Sacred Entombments
+  {
+    "x": 30,
+    "y": 57,
+    "locations": [ "Z0402.l13" ]
+  },
+  {
+    "x": 31,
+    "y": 58,
+    "locations": [ "Z0402.l15" ]
+  },
+  {
+    "x": 28,
+    "y": 57,
+    "locations": [ "Z0406.c0" ]
+  },
+  {
+    "x": 28,
+    "y": 49,
+    "locations": [ "Z0406.l4" ]
+  },
+  {
+    "x": 21,
+    "y": 57,
+    "locations": [ "Z0409.l7" ]
+  },
+  {
+    "x": 29,
+    "y": 52,
+    "locations": [ "Z0410.l6" ]
+  },
+  {
+    "x": 32,
+    "y": 52,
+    "locations": [ "Z0412.l1" ]
+  },
+  {
+    "x": 32,
+    "y": 51,
+    "locations": [ "Z0412.l2" ]
+  },
+  {
+    "x": 27,
+    "y": 53,
+    "locations": [ "Z0413.l0" ]
+  },
+  {
+    "x": 27,
+    "y": 52,
+    "locations": [ "Z0414.l4" ]
+  },
+  {
+    "x": 26,
+    "y": 50,
+    "locations": [ "Z0415.l1" ]
+  },
+  {
+    "x": 25,
+    "y": 50,
+    "locations": [ "Z0415.l3" ]
+  },
+  {
+    "x": 23,
+    "y": 49,
+    "locations": [ "Z0417.l4" ]
+  },
+  {
+    "x": 32,
+    "y": 49,
+    "locations": [ "Z0421.r8" ]
+  },
+  {
+    "x": 19,
+    "y": 55,
+    "locations": [ "Z0423.l1" ]
+  },
+// City of the Blessed Name
+  {
+    "x": 47,
+    "y": 45,
+    "locations": [ "Z0501.c0", "Z05BZ05.l1" ]
+  },
+  {
+    "x": 49,
+    "y": 45,
+    "locations": [ "Z05BZ04.l0" ]
+  },
+  {
+    "x": 49,
+    "y": 44,
+    "locations": [ "Z05BZ02.i0", "Z05BZ02.l1" ]
+  },
+  {
+    "x": 52,
+    "y": 43,
+    "locations": [ "Z0502.c0" ]
+  },
+  {
+    "x": 51,
+    "y": 44,
+    "locations": [ "Z0502.i1" ]
+  },
+  {
+    "x": 50,
+    "y": 44,
+    "locations": [ "Z05BZ01.l0", "Z05BZ01.l16", "Z05BZ01.i0" ]
+  },
+  {
+    "x": 54,
+    "y": 45,
+    "locations": [ "Z0503.c0" ]
+  },
+  {
+    "x": 55,
+    "y": 46,
+    "locations": [ "Z0503.l4" ]
+  },
+  {
+    "x": 53,
+    "y": 45,
+    "locations": [ "Z05BZ06.l0" ]
+  },
+  {
+    "x": 52,
+    "y": 45,
+    "locations": [ "Z0506.i0" ]
+  },
+  {
+    "x": 53,
+    "y": 43,
+    "locations": [ "Z0511.l0" ]
+  },
+  {
+    "x": 53,
+    "y": 44,
+    "locations": [ "Z0503.i9", "SHOPHAND.o0", "SHOPHAND.o1", "SHOPHAND.o2", "SHOPHAND.o3", "SHOPHAND.o4", "SHOPHAND.o5", "SHOPHAND.o6", "SHOPHAND.o7", "SHOPHAND.o8", "SHOPHAND.o9", "SHOPHAND.o10", "SHOPHAND.o11" ]
+  },
+  {
+    "x": 54,
+    "y": 44,
+    "locations": [ "SHOPITINERANT.o0", "SHOPITINERANT.o1" ]
+  },
+// Grilles and Ruin
+  {
+    "x": 61,
+    "y": 45,
+    "locations": [ "Z0602.l2" ]
+  },
+  {
+    "x": 67,
+    "y": 44,
+    "locations": [ "Z0605.l10" ]
+  },
+  {
+    "x": 66,
+    "y": 42,
+    "locations": [ "Z0605.l11" ]
+  },
+  {
+    "x": 60,
+    "y": 46,
+    "locations": [ "Z0608.c0" ]
+  },
+  {
+    "x": 58,
+    "y": 43,
+    "locations": [ "Z0611.l2" ]
+  },
+  {
+    "x": 60,
+    "y": 43,
+    "locations": [ "Z0611.r2" ]
+  },
+  {
+    "x": 64,
+    "y": 43,
+    "locations": [ "Z0612.l6" ]
+  },
+  {
+    "x": 67,
+    "y": 41,
+    "locations": [ "Z0614.l6" ]
+  },
+  {
+    "x": 70,
+    "y": 41,
+    "locations": [ "Z0614.l7" ]
+  },
+  {
+    "x": 58,
+    "y": 47,
+    "locations": [ "Z0615.r2" ]
+  },
+// Palace of the Embroideries
+  {
+    "x": 84,
+    "y": 41,
+    "locations": [ "Z0707.i2" ]
+  },
+  {
+    "x": 85,
+    "y": 40,
+    "locations": [ "Z0709.l1" ]
+  },
+  {
+    "x": 73,
+    "y": 43,
+    "locations": [ "Z0711.l2" ]
+  },
+  {
+    "x": 82,
+    "y": 45,
+    "locations": [ "Z0715.c0" ]
+  },
+  {
+    "x": 78,
+    "y": 45,
+    "locations": [ "Z0721.i2" ]
+  },
+  {
+    "x": 78,
+    "y": 44,
+    "locations": [ "Z0722.s0", "Z0722.s1" ]
+  },
+  {
+    "x": 77,
+    "y": 45,
+    "locations": [ "Z0723.l2" ]
+  },
+  {
+    "x": 74,
+    "y": 45,
+    "locations": [ "Z0725.i1" ]
+  },
+  {
+    "x": 79,
+    "y": 40,
+    "locations": [ "Z0728.i2" ]
+  },
+  {
+    "x": 77,
+    "y": 40,
+    "locations": [ "Z0730.r6" ]
+  },
+  {
+    "x": 78,
+    "y": 40,
+    "locations": [ "Z0730.l2" ]
+  },
+// Choir of Thorns
+  {
+    "x": 73,
+    "y": 53,
+    "locations": [ "Z0805.l0" ]
+  },
+  {
+    "x": 75,
+    "y": 52,
+    "locations": [ "Z0806.c0" ]
+  },
+  {
+    "x": 84,
+    "y": 47,
+    "locations": [ "Z0809.c0" ]
+  },
+  {
+    "x": 65,
+    "y": 51,
+    "locations": [ "Z0810.l0" ]
+  },
+  {
+    "x": 70,
+    "y": 49,
+    "locations": [ "Z0811.w0" ]
+  },
+  {
+    "x": 73,
+    "y": 49,
+    "locations": [ "Z0814.l6" ]
+  },
+  {
+    "x": 81,
+    "y": 47,
+    "locations": [ "Z0815.i0" ]
+  },
+  {
+    "x": 68,
+    "y": 54,
+    "locations": [ "Z0817.l0" ]
+  },
+// Crown of Towers
+  {
+    "x": 80,
+    "y": 55,
+    "locations": [ "Z0901.l1" ]
+  },
+  {
+    "x": 80,
+    "y": 54,
+    "locations": [ "Z0901.l3" ]
+  },
+  {
+    "x": 83,
+    "y": 54,
+    "locations": [ "Z0903.l2" ]
+  },
+  {
+    "x": 89,
+    "y": 53,
+    "locations": [ "Z0905.l2" ]
+  },
+  {
+    "x": 83,
+    "y": 56,
+    "locations": [ "Z0908.l9" ]
+  },
+  {
+    "x": 92,
+    "y": 55,
+    "locations": [ "Z0909.l5" ]
+  },
+  {
+    "x": 95,
+    "y": 54,
+    "locations": [ "Z0912.l8" ]
+  },
+  {
+    "x": 94,
+    "y": 52,
+    "locations": [ "Z0913.l1" ]
+  },
+  {
+    "x": 95,
+    "y": 59,
+    "locations": [ "Z0915.l9" ]
+  },
+  {
+    "x": 84,
+    "y": 60,
+    "locations": [ "Z0921.r14" ]
+  },
+  {
+    "x": 90,
+    "y": 52,
+    "locations": [ "Z0923.c0" ]
+  },
+  {
+    "x": 89,
+    "y": 56,
+    "locations": [ "Z0926.a0" ]
+  },
+  {
+    "x": 88,
+    "y": 56,
+    "locations": [ "Z0927.l4" ]
+  },
+  {
+    "x": 92,
+    "y": 60,
+    "locations": [ "Z0928.c0" ]
+  },
+  {
+    "x": 95,
+    "y": 60,
+    "locations": [ "Z0929.w0" ]
+  },
+  {
+    "x": 90,
+    "y": 55,
+    "locations": [ "SHOPITINERANT.o2" ]
+  },
+{
+    "x": 85,
+    "y": 58,
+    "locations": [ "SHOPITINERANT.o4" ]
+  },
+// Elevated Temples
+  {
+    "x": 56,
+    "y": 59,
+    "locations": [ "Z1003.l0" ]
+  },
+  {
+    "x": 54,
+    "y": 60,
+    "locations": [ "Z1004.l10" ]
+  },
+  {
+    "x": 47,
+    "y": 61,
+    "locations": [ "Z1007.l2" ]
+  },
+  {
+    "x": 55,
+    "y": 62,
+    "locations": [ "Z1011.l4" ]
+  },
+  {
+    "x": 47,
+    "y": 57,
+    "locations": [ "Z1015.l0" ]
+  },
+  {
+    "x": 45,
+    "y": 58,
+    "locations": [ "Z1015.l1" ]
+  },
+  {
+    "x": 51,
+    "y": 59,
+    "locations": [ "Z1017.w0" ]
+  },
+  {
+    "x": 50,
+    "y": 58,
+    "locations": [ "Z1018.l3" ]
+  },
+  {
+    "x": 47,
+    "y": 65,
+    "locations": [ "Z1019.c0" ]
+  },
+  {
+    "x": 48,
+    "y": 63,
+    "locations": [ "Z1019.l9" ]
+  },
+  {
+    "x": 55,
+    "y": 64,
+    "locations": [ "Z1023.c0" ]
+  },
+  {
+    "x": 55,
+    "y": 66,
+    "locations": [ "Z1023.l8" ]
+  },
+  {
+    "x": 57,
+    "y": 63,
+    "locations": [ "Z1045.l0" ]
+  },
+  {
+    "x": 51,
+    "y": 56,
+    "locations": [ "Z1050.c0", "Z1050.l7" ]
+  },
+  {
+    "x": 45,
+    "y": 53,
+    "locations": [ "Z1058.c0" ]
+  },
+  {
+    "x": 53,
+    "y": 67,
+    "locations": [ "Z1063.w0" ]
+  },
+  {
+    "x": 51,
+    "y": 48,
+    "locations": [ "SHOPITINERANT.o3" ]
+  },
+// Basilica of Absent Faces
+  {
+    "x": 89,
+    "y": 59,
+    "locations": [ "Z1103.l1" ]
+  },
+  {
+    "x": 87,
+    "y": 62,
+    "locations": [ "Z1107.l5" ]
+  },
+  {
+    "x": 89,
+    "y": 64,
+    "locations": [ "Z1109.l0" ]
+  },
+  {
+    "x": 88,
+    "y": 70,
+    "locations": [ "Z1113.r8", "Z1113.i8", "Z1114.c0" ]
+  },
+// Sunken Cathedral
+  {
+    "x": 31,
+    "y": 35,
+    "locations": [ "Z1202.c0" ]
+  },
+  {
+    "x": 33,
+    "y": 35,
+    "locations": [ "Z1203.i2" ]
+  },
+  {
+    "x": 33,
+    "y": 37,
+    "locations": [ "Z1205.w0" ]
+  },
+  {
+    "x": 27,
+    "y": 33,
+    "locations": [ "Z1209.l1" ]
+  },
+  {
+    "x": 27,
+    "y": 35,
+    "locations": [ "Z1209.l2" ]
+  },
+  {
+    "x": 26,
+    "y": 38,
+    "locations": [ "Z1210.l2" ]
+  },
+  {
+    "x": 29,
+    "y": 33,
+    "locations": [ "Z1216.r9", "Z1216.i9" ]
+  },
+  {
+    "x": 33,
+    "y": 33,
+    "locations": [ "SHOPITINERANT.o5" ]
+  },
+// Two Moons
+  {
+    "x": 62,
+    "y": 64,
+    "locations": [ "Z1303.c0" ]
+  },
+  {
+    "x": 62,
+    "y": 62,
+    "locations": [ "Z1304.c0" ]
+  },
+  {
+    "x": 66,
+    "y": 64,
+    "locations": [ "Z1307.l7" ]
+  },
+  {
+    "x": 66,
+    "y": 61,
+    "locations": [ "Z1308.l7" ]
+  },
+  {
+    "x": 68,
+    "y": 62,
+    "locations": [ "Z1310.l0" ]
+  },
+  {
+    "x": 68,
+    "y": 64,
+    "locations": [ "Z1311.l7" ]
+  },
+  {
+    "x": 68,
+    "y": 60,
+    "locations": [ "Z1312.l4" ]
+  },
+  {
+    "x": 65,
+    "y": 59,
+    "locations": [ "Z1314.l6" ]
+  },
+  {
+    "x": 62,
+    "y": 58,
+    "locations": [ "Z1326.i0" ]
+  },
+  {
+    "x": 61,
+    "y": 66,
+    "locations": [ "Z1327.r7", "Z1327.i7", "Z1327.l3" ]
+  },
+  {
+    "x": 60,
+    "y": 64,
+    "locations": [ "Z1329.l0" ]
+  },
+  {
+    "x": 60,
+    "y": 61,
+    "locations": [ "Z1330.l5" ]
+  },
+// Mother of Mothers
+  {
+    "x": 57,
+    "y": 32,
+    "locations": [ "Z1404.c0" ]
+  },
+  {
+    "x": 56,
+    "y": 32,
+    "locations": [ "Z1404.l8" ]
+  },
+  {
+    "x": 56,
+    "y": 29,
+    "locations": [ "Z1404.l15" ]
+  },
+  {
+    "x": 52,
+    "y": 30,
+    "locations": [ "Z1405.l3" ]
+  },
+  {
+    "x": 50,
+    "y": 30,
+    "locations": [ "Z1407.l1" ]
+  },
+  {
+    "x": 45,
+    "y": 30,
+    "locations": [ "Z1408.c0" ]
+  },
+  {
+    "x": 50,
+    "y": 33,
+    "locations": [ "Z1418.l5" ]
+  },
+  {
+    "x": 48,
+    "y": 34,
+    "locations": [ "Z1419.l2" ]
+  },
+  {
+    "x": 50,
+    "y": 34,
+    "locations": [ "Z1421.l1" ]
+  },
+  {
+    "x": 49,
+    "y": 28,
+    "locations": [ "Z1422.l8" ]
+  },
+  {
+    "x": 59,
+    "y": 29,
+    "locations": [ "Z1424.l3" ]
+  },
+  {
+    "x": 55,
+    "y": 31,
+    "locations": [ "Z1427.l0" ]
+  },
+// Dreams of Incense
+  {
+    "x": 67,
+    "y": 37,
+    "locations": [ "Z1501.s0", "Z1501.s1", "Z1501.s2", "Z1501.s3", "Z1501.s4" ]
+  },
+// The Severed Tower
+  {
+    "x": 19,
+    "y": 35,
+    "locations": [ "Z1602.l2" ]
+  },
+  {
+    "x": 20,
+    "y": 36,
+    "locations": [ "Z1603.i2" ]
+  },
+  {
+    "x": 19,
+    "y": 38,
+    "locations": [ "Z1605.c0", "Z1605.l5" ]
+  },
+  {
+    "x": 18,
+    "y": 42,
+    "locations": [ "Z1610.l4" ]
+  },
+  {
+    "x": 18,
+    "y": 47,
+    "locations": [ "Z1615.a0" ]
+  },
+  {
+    "x": 18,
+    "y": 48,
+    "locations": [ "Z1616.i1" ]
+  },
+  {
+    "x": 18,
+    "y": 51,
+    "locations": [ "Z1619.l6" ]
+  },
+  {
+    "x": 18,
+    "y": 52,
+    "locations": [ "Z1621.l1" ]
+  },
+  {
+    "x": 20,
+    "y": 43,
+    "locations": [ "Z1622.r6", "Z1622.i6" ]
+  },
+  {
+    "x": 22,
+    "y": 37,
+    "locations": [ "Z1623.c0" ]
+  },
+  {
+    "x": 20,
+    "y": 42,
+    "locations": [ "Z1625.i2" ]
+  },
+// Streets of Wakes
+  {
+    "x": 58,
+    "y": 38,
+    "locations": [ "Z1701.c0" ]
+  },
+  {
+    "x": 63,
+    "y": 37,
+    "locations": [ "Z1709.l0" ]
+  },
+  {
+    "x": 65,
+    "y": 41,
+    "locations": [ "Z1715.l0" ]
+  },
+  {
+    "x": 62,
+    "y": 40,
+    "locations": [ "Z1718.l0" ]
+  },
+  {
+    "x": 60,
+    "y": 41,
+    "locations": [ "Z1719.l3" ]
+  },
+// Crimson Rains
+  {
+    "x": 52,
+    "y": 70,
+    "locations": [ "Z1801.l1" ]
+  },
+  {
+    "x": 49,
+    "y": 74,
+    "locations": [ "Z1802.l10" ]
+  },
+  {
+    "x": 53,
+    "y": 75,
+    "locations": [ "Z1803.l7" ]
+  },
+  {
+    "x": 50,
+    "y": 82,
+    "locations": [ "Z1804.l2" ]
+  },
+  {
+    "x": 53,
+    "y": 84,
+    "locations": [ "Z1808.r6", "Z1808.i6" ]
+  },
+  {
+    "x": 50,
+    "y": 66,
+    "locations": [ "SHOPITINERANT.o7" ]
+  },
+// Profundo Lamento
+  {
+    "x": 51,
+    "y": 41,
+    "locations": [ "Z1901.l0" ]
+  },
+  {
+    "x": 51,
+    "y": 39,
+    "locations": [ "Z1903.l0" ]
+  },
+  {
+    "x": 54,
+    "y": 37,
+    "locations": [ "Z1905.c0" ]
+  },
+  {
+    "x": 51,
+    "y": 36,
+    "locations": [ "Z1906.i1" ]
+  },
+  {
+    "x": 54,
+    "y": 36,
+    "locations": [ "Z1907.i0" ]
+  },
+  {
+    "x": 57,
+    "y": 38,
+    "locations": [ "Z1909.l0" ]
+  },
+  {
+    "x": 55,
+    "y": 38,
+    "locations": [ "Z1910.l0" ]
+  },
+  {
+    "x": 56,
+    "y": 38,
+    "locations": [ "Z1910.l4" ]
+  },
+  {
+    "x": 47,
+    "y": 43,
+    "locations": [ "Z1913.l1" ]
+  },
+  {
+    "x": 48,
+    "y": 43,
+    "locations": [ "Z1914.i2" ]
+  },
+  {
+    "x": 45,
+    "y": 42,
+    "locations": [ "Z1917.i0", "Z1917.l3" ]
+  },
+  {
+    "x": 55,
+    "y": 36,
+    "locations": [ "Z1918.l2" ]
+  },
+  {
+    "x": 55,
+    "y": 35,
+    "locations": [ "Z1919.a0" ]
+  },
+  {
+    "x": 54,
+    "y": 35,
+    "locations": [ "Z1919.l3" ]
+  },
+// Sea of Ink
+  {
+    "x": 45,
+    "y": 33,
+    "locations": [ "Z2001.l1" ]
+  },
+  {
+    "x": 34,
+    "y": 33,
+    "locations": [ "Z2004.c0" ]
+  },
+// Labyrinth of Tides
+  {
+    "x": 28,
+    "y": 30,
+    "locations": [ "Z2102.l0" ]
+  },
+  {
+    "x": 27,
+    "y": 29,
+    "locations": [ "Z2103.l0" ]
+  },
+  {
+    "x": 25,
+    "y": 28,
+    "locations": [ "Z2104.l7" ]
+  },
+  {
+    "x": 22,
+    "y": 29,
+    "locations": [ "Z2106.l4" ]
+  },
+  {
+    "x": 13,
+    "y": 31,
+    "locations": [ "Z2112.l0" ]
+  },
+  {
+    "x": 17,
+    "y": 33,
+    "locations": [ "Z2115.c0" ]
+  },
+  {
+    "x": 15,
+    "y": 33,
+    "locations": [ "Z2116.l2" ]
+  },
+  {
+    "x": 17,
+    "y": 28,
+    "locations": [ "Z2117.c0" ]
+  },
+  {
+    "x": 16,
+    "y": 27,
+    "locations": [ "Z2117.l1" ]
+  },
+  {
+    "x": 19,
+    "y": 27,
+    "locations": [ "Z2119.i0" ]
+  },
+  {
+    "x": 20,
+    "y": 27,
+    "locations": [ "Z2120.i2" ]
+  },
+  {
+    "x": 24,
+    "y": 32,
+    "locations": [ "Z2123.l2" ]
+  },
+// Beneath Her Sacred Grounds
+  {
+    "x": 51,
+    "y": 22,
+    "locations": [ "Z2301.l16" ]
+  },
+  {
+    "x": 49,
+    "y": 20,
+    "locations": [ "Z2304.r15" ]
+  },
+  {
+    "x": 49,
+    "y": 23,
+    "locations": [ "Z2306.c0" ]
+  },
+  {
+    "x": 47,
+    "y": 18,
+    "locations": [ "Z2308.a0" ]
+  },
+  {
+    "x": 54,
+    "y": 23,
+    "locations": [ "Z2310.w0" ]
+  },
+// Garden of the High Choirs
+  {
+    "x": 43,
+    "y": 53,
+    "locations": [ "Z2401.i0" ]
+  },
+  {
+    "x": 43,
+    "y": 55,
+    "locations": [ "Z2401.l3" ]
+  },
+  {
+    "x": 43,
+    "y": 56,
+    "locations": [ "Z2401.l4" ]
+  },
+  {
+    "x": 43,
+    "y": 60,
+    "locations": [ "Z2401.l2" ]
+  },
+  {
+    "x": 43,
+    "y": 63,
+    "locations": [ "Z2402.l0", "Z2402.l1" ]
+  },
+  {
+    "x": 43,
+    "y": 64,
+    "locations": [ "Z2402.l2" ]
+  },
+// Forlorn Patio
+  {
+    "x": 56,
+    "y": 40,
+    "locations": [ "SHOPMISSABLES.o0", "SHOPMISSABLES.o1", "SHOPMISSABLES.o2", "SHOPMISSABLES.o3", "SHOPMISSABLES.o4", "SHOPMISSABLES.o5", "SHOPMISSABLES.o6" ]
   }
 ]
