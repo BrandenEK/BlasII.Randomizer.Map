@@ -14,7 +14,6 @@ namespace BlasII.Randomizer.Map
         private readonly Dictionary<Vector2Int, ILocation> _locationData = new();
         internal Dictionary<Vector2Int, ILocation> AllLocations => _locationData;
 
-        //public bool IsMapOpen { get; private set; } = false;
         public MapMode MapMode { get; private set; } = MapMode.Closed;
         public bool DisplayLocations { get; private set; } = true;
 
@@ -64,20 +63,19 @@ namespace BlasII.Randomizer.Map
         {
             if (MapMode == MapMode.Closed) return;
 
-            if (InputHandler.GetKeyDown("ToggleLocations"))
+            if (InputHandler.GetKeyDown("ToggleLocations") && MapMode == MapMode.OpenNormal)
             {
                 DisplayLocations = !DisplayLocations;
-                _ui.Refresh(_inventory.CurrentInventory);
+                _ui.Refresh(_inventory.CurrentInventory, true, true);
             }
 
-            if (MapMode == MapMode.OpenNormal)
-                _ui.Update(_inventory.CurrentInventory);
+            _ui.Update(_inventory.CurrentInventory);
         }
 
         public void OnOpenMap(bool isNormal)
         {
             MapMode = isNormal ? MapMode.OpenNormal : MapMode.OpenTeleport;
-            _ui.Refresh(_inventory.CurrentInventory);
+            _ui.Refresh(_inventory.CurrentInventory, isNormal, isNormal);
         }
 
         public void OnCloseMap()
@@ -85,7 +83,16 @@ namespace BlasII.Randomizer.Map
             MapMode = MapMode.Closed;
         }
 
-        public void OnZoomIn() => _ui.Refresh(_inventory.CurrentInventory);
-        public void OnZoomOut() => _ui.Refresh(_inventory.CurrentInventory);
+        public void OnZoomIn()
+        {
+            MapMode = MapMode.OpenNormal;
+            _ui.Refresh(_inventory.CurrentInventory, true, true);
+        }
+
+        public void OnZoomOut()
+        {
+            MapMode = MapMode.OpenZoomed;
+            _ui.Refresh(_inventory.CurrentInventory, true, false);
+        }
     }
 }

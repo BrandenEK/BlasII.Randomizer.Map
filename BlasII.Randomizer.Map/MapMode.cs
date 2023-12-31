@@ -5,6 +5,7 @@ namespace BlasII.Randomizer.Map
     {
         Closed = 0,
         OpenTeleport = 1,
-        OpenNormal = 2
+        OpenNormal = 2,
+        OpenZoomed = 3,
     }
 }

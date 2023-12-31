@@ -28,13 +28,10 @@ namespace BlasII.Randomizer.Map
         public void LoadImage(Sprite image) => _locationImage = image;
 
         /// <summary>
-        /// Recalculate the reachability for all locations
+        /// Refresh all cell and location UI
         /// </summary>
-        public void Refresh(Blas2Inventory inventory)
+        public void Refresh(Blas2Inventory inventory, bool showCells, bool showLocations)
         {
-            bool showEverything = Main.MapTracker.MapMode == MapMode.OpenNormal
-                && Main.MapTracker.DisplayLocations;
-
             // Create location holder and name text
             if (_locationHolder == null || _cellHolder == null)
                 CreateLocationHolder();
@@ -45,13 +42,19 @@ namespace BlasII.Randomizer.Map
             var allCells = CoreCache.Map.GetAllCells().ToArray();
             var revealedCells = CoreCache.Map.GetRevealedCells().ToArray();
             foreach (var cell in allCells)
+            {
                 _mapCache.Value.uiRenderNormal.HideCell(cell);
-            foreach (var cell in showEverything ? allCells : revealedCells)
+                //_mapCache.Value.uiRenderZoomedOut.HideCell(cell);
+            }
+            foreach (var cell in showCells && Main.MapTracker.DisplayLocations ? allCells : revealedCells)
+            {
                 _mapCache.Value.uiRenderNormal.ShowCell(cell);
+                //_mapCache.Value.uiRenderZoomedOut.ShowCell(cell);
+            }
 
             // Update visibility of location holder
             _locationHolder.SetAsLastSibling();
-            _locationHolder.gameObject.SetActive(showEverything);
+            _locationHolder.gameObject.SetActive(showLocations && Main.MapTracker.DisplayLocations);
 
             // Update logic status for all cells
             foreach (var location in Main.MapTracker.AllLocations.Values)
@@ -83,33 +86,6 @@ namespace BlasII.Randomizer.Map
             // Process location holder and name text
             UpdateLocationHolder();
             UpdateNameText(inventory);
-
-            // Only do this next part if debug
-
-            //Transform location = _locationHolder.GetChild(_locationHolder.childCount - 1);
-            //var movement = new Vector3();
-
-            //if (Input.GetKeyDown(KeyCode.Keypad5))
-            //{
-            //    movement.y = 1;
-            //}
-            //else if (Input.GetKeyDown(KeyCode.Keypad2))
-            //{
-            //    movement.y = -1;
-            //}
-            //if (Input.GetKeyDown(KeyCode.Keypad1))
-            //{
-            //    movement.x = -1;
-            //}
-            //else if (Input.GetKeyDown(KeyCode.Keypad3))
-            //{
-            //    movement.x = 1;
-            //}
-
-            //location.localPosition += movement * 48 * (Input.GetKey(KeyCode.Keypad0) ? 3 : 1);
-
-            //if (Input.GetKeyDown(KeyCode.KeypadEnter))
-            //    Main.MapTracker.Log($"x: {location.localPosition.x / 48}, y: {location.localPosition.y / 48}");
         }
 
         private void UpdateLocationHolder()
